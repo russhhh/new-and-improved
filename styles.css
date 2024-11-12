@@ -1,0 +1,202 @@
+/* Reset default browser styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    line-height: 1.7;
+    padding: 20px;
+    margin: auto;
+}
+h1 {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+h2 {
+    font-family: 'Trebuchet MS', sans-serif;
+    color: #073B4D;
+    font-size: 1.3rem;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: #333;
+    padding: 10px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 2em;
+}
+
+.navbar li {
+    margin: 0 10px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #ff9800;
+}
+
+/* Banner styling */
+.banner {
+    position: relative;
+    text-align: center;
+    color: white;
+    width: 100vw;
+    height: 250px;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.banner h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 3rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}
+
+/* News carousel styling */
+.news-carousel {
+    background-color: #fff;
+    padding: 15px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 800px;
+    margin-bottom: 20px;
+}
+
+.news-item {
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+/* Content section styling */
+.content {
+    display: block;
+    width: 100%;
+    margin: auto;
+}
+
+section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+section h1 {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+.article-block {
+    position: relative;
+    max-height: 400px;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.article-block.expanded {
+    max-height: none; /* Removes max height when expanded */
+}
+
+.article-block::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px; /* Fade height */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    pointer-events: none; /* Allows clicks through the gradient overlay */
+    z-index: 1; /* Layer below the button */
+}
+
+/* Hide the fade effect when expanded */
+.article-block.expanded::after {
+    display: none;
+}
+
+.toggle-button {
+    position: absolute; /* Absolutely positioned inside .article-block */
+    bottom: 10px; /* Position near the bottom of the block */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2; /* Places the button above the fade effect */
+    background-color: #1A6F85;
+    color: #fff;
+    border-radius: 8px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+/* Footer styling */
+    .footer {
+        background-color: transparent;
+        color: #333;
+        text-align: center;
+        padding: 20px;
+        margin-top: 20px;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .footer img {
+        width: 200px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar li {
+        margin: 5px 0;
+    }
+
+    .news-carousel,
+    section {
+        width: 100%;
+    }
+}
