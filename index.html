@@ -15,16 +15,23 @@
             <h1>Robert Hare | Psychopathy Research</h1>
         </div>
         <nav class="navbar">
-            <ul>
-                <li><a href="#" title="Explore Dr. Hare’s pioneering work in psychopathy.">HOME</a></li>
-                <li><a href="about.html" title="Learn about Dr. Hare’s background and research focus.">ABOUT</a></li>
-                <li><a href="#" title="Discover the Psychopathy Checklist-Revised and its uses.">PCL-R</a></li>
-                <li><a href="#" title="Access Dr. Hare’s publications and significant studies.">RESEARCH</a></li>
-                <li><a href="#" title="Review Dr. Hare’s published books and featured interviews.">MEDIA</a></li>
-                <li><a href="#" title="Read Dr. Hare’s reflections and personal insights.">LEGACY</a></li>
-                <li><a href="#" title="Get in touch with Dr. Hare’s team for inquiries.">CONTACT</a></li>
-            </ul>
-        </nav>
+           <div class="nav-container">
+              <div class="menu-toggle" id="mobile-menu">
+                 <span class="bar"></span>
+                 <span class="bar"></span>
+                 <span class="bar"></span>
+           </div>
+         <ul class="nav-list">
+           <li><a href="index.html" title="Explore Dr. Hare’s pioneering work in psychopathy.">HOME</a></li>
+           <li><a href="about.html" title="Learn about Dr. Hare’s background and research focus." class="active">ABOUT</a></li>
+           <li><a href="#" title="Discover the Psychopathy Checklist-Revised and its uses.">PCL-R</a></li>
+           <li><a href="#" title="Access Dr. Hare’s publications and significant studies.">RESEARCH</a></li>
+           <li><a href="#" title="Review Dr. Hare’s published books and featured interviews.">MEDIA</a></li>
+           <li><a href="#" title="Read Dr. Hare’s reflections and personal insights.">LEGACY</a></li>
+           <li><a href="#" title="Get in touch with Dr. Hare’s team for inquiries.">CONTACT</a></li>
+         </ul>
+        </div>
+    </nav>
     </header>
     <main class="content">
         <div class="news-carousel">
@@ -66,6 +73,12 @@
       </footer>
     <!-- JavaScript code -->
         <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navList = document.querySelector('.nav-list');
+
+        mobileMenu.addEventListener('click', () => {
+           navList.classList.toggle('active');
+        });
           document.querySelectorAll('.toggle-button').forEach(button => {
           button.addEventListener('click', function() {
               const articleBlock = this.parentElement;
