@@ -96,9 +96,9 @@ ul {
 }
 
 .menu-toggle .bar {
-    background-color: white;
+    background-color: #333;
     height: 3px;
-    margin: 3px 0;
+    margin: 2px 3px;
     width: 25px;
 }
 
@@ -345,18 +345,20 @@ section {
    .menu-toggle {
        display: flex; /* Show hamburger on small devices */
        position: absolute;
-       left: 20px; /* Left align hamburger */
+       left: 10px; /* Left align hamburger */
+       top: 10px;
    }
 
    .nav-list {
        display: none;
        flex-direction: column;
-       align-items: center;
-       width: 100%;
+       align-items: Left;
+       width: 80%;
        position: absolute;
-       top: 60px;
+       top: 0;
        left: 0;
        background-color: #333; /* Background for expanded menu */
+       opacity: 0.7;
    }
 
    .nav-list.active {
@@ -364,10 +366,10 @@ section {
    }
 
    .nav-list li {
-       padding: 10px 0;
+       padding: 0 0;
    }
 
    .nav-list a {
-       font-size: 5vw; /* Responsive font size */
+       font-size: 4vw; /* Responsive font size */
    }
 }
