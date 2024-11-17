@@ -300,11 +300,11 @@ section {
 /* Specific styling for very small devices like an iPhone */
 @media (max-width: 480px) {
     .banner {
-        height: 40vh; /* Increase height a bit if needed for better visual balance */
+        height: 18vh; /* Increase height a bit if needed for better visual balance */
     }
 
     .banner h1 {
-        font-size: 6vw; /* Adjust the font size to make it fit better on small screens */
+        font-size: 4vw; /* Adjust the font size to make it fit better on small screens */
         padding: 10px;  /* Optional: add padding to make the text more readable */
     }
 }
