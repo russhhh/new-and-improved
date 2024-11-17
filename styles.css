@@ -89,6 +89,7 @@ ul {
 
 .navbar li {
     margin: 0 10px;
+    padding-bottom: 0;
 }
 
 .navbar a {
@@ -133,7 +134,7 @@ ul {
 .tabs {
     display: flex;
     justify-content: center;
-    gap: 2em;
+    gap: 0em;
     cursor: pointer;
     margin-top: 0;
 }
@@ -152,8 +153,8 @@ ul {
 }
 
 .tab.active {
-    background: #f9f9f9;
-    border-bottom: 2px solid #fff;
+    background: #cfd9e1;
+    border-bottom: 2px solid #666;
     font-weight: bold;
 }
 
