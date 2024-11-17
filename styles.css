@@ -4,16 +4,18 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+header {
+    width: 100%;           /* Make the header take up the full width of the screen */
+    margin: 0;             /* Remove any default margin */
+    padding: 0;            /* Remove any padding if not needed */
+}
 body {
+    width: 100%;
     font-family: 'Arial', sans-serif;
     color: #333;
     background-color: #f9f9f9;
     line-height: 1.7;
-    padding: 20px;
-    margin: auto;
 }
-
 h1 {
     font-family: 'Trebuchet MS', sans-serif;
     font-size: 3em;  /* Default size for larger screens */
@@ -168,6 +170,7 @@ ul {
 
 .tab-content.active {
     display: block;
+    width: 800px;
 }
 
 /* Accordion styling */
@@ -207,8 +210,8 @@ ul {
 /* Content section styling */
 .content {
     display: block;
-    width: 100%;
-    margin: auto;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 section {
@@ -278,7 +281,10 @@ section {
 }
 
 /* Responsive styling */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+    body {
+      width: 90%;
+    }
     .content {
         flex-direction: column;
     }
@@ -299,12 +305,15 @@ section {
 }
 /* Specific styling for very small devices like an iPhone */
 @media (max-width: 480px) {
+    body {
+      width: 100%;
+    }
     .banner {
         height: 18vh; /* Increase height a bit if needed for better visual balance */
     }
 
     .banner h1 {
-        font-size: 4vw; /* Adjust the font size to make it fit better on small screens */
+        font-size: 4.5vw; /* Adjust the font size to make it fit better on small screens */
         padding: 10px;  /* Optional: add padding to make the text more readable */
     }
 }
