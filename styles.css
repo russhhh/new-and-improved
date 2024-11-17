@@ -165,12 +165,10 @@ ul {
 .tab-content {
     display: none;
     padding: 20px;
-    font-size: 14px;
 }
 
 .tab-content.active {
     display: block;
-    width: 800px;
 }
 
 /* Accordion styling */
