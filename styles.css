@@ -322,7 +322,7 @@ section {
     }
 }
 /* Specific styling for very small devices like an iPhone */
-@media (max-width: 480px) {
+@media (max-width: 900px) {
     body {
       width: 100%;
     }
