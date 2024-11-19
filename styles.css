@@ -153,7 +153,7 @@ ul {
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: 'Trebuchet MS', sans-serif;
-    font-size: 3.5vw;
+    font-size: 5vw;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
     white-space: nowrap; /* Prevent the text from wrapping to a new line */
