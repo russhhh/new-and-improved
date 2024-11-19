@@ -8,6 +8,11 @@ header {
     width: 100%;           /* Make the header take up the full width of the screen */
     margin: 0;             /* Remove any default margin */
     padding: 0;            /* Remove any padding if not needed */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
 }
 body {
     width: 100%;
@@ -17,14 +22,14 @@ body {
     line-height: 1.7;
 }
 h1 {
-    font-family: 'Trebuchet MS', sans-serif;
+    font-family: 'Arial', sans-serif;
     font-size: 3em;  /* Default size for larger screens */
     margin-bottom: 10px;
     white-space: nowrap; /* Prevent text wrapping */
 }
 
 h2 {
-    font-family: 'Trebuchet MS', sans-serif;
+    font-family: 'Arial', sans-serif;
     color: #073B4D;
     font-size: 1.8rem;
     font-weight: 900;
@@ -158,6 +163,7 @@ ul {
 .tabs {
     display: flex;
     justify-content: center;
+    line-height: 1;
     gap: 0em;
     cursor: pointer;
     margin-top: 0;
@@ -166,7 +172,7 @@ ul {
 .tab {
     flex: 1;
     text-align: center;
-    padding: 15px;
+    padding: 10px;
     background: #8bb3c4;
     border-bottom: 2px solid #666;
     transition: background 0.3s ease;
@@ -216,7 +222,6 @@ ul {
     margin: 20px auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 800px;
     margin-bottom: 20px;
 }
 
@@ -229,7 +234,8 @@ ul {
 .content {
     display: block;
     max-width: 800px;
-    margin: 0 auto;
+    margin: 300px auto 0;
+    overflow-y: auto;
 }
 
 section {
