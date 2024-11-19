@@ -113,11 +113,11 @@ ul {
     list-style: none;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 2rem ;
 }
 
 .nav-list li {
-    padding: 0 10px;
+    padding: 0 8px;
 }
 
 .nav-list a {
