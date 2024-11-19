@@ -305,7 +305,7 @@ section {
 }
 
 /* Responsive styling */
-@media (max-width: 1024px) {
+@media (max-width: 498px) {
       body {
       width: 100%;
     }
