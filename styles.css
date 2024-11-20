@@ -224,8 +224,12 @@ ul {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
 }
+.fa-solid fa-flag {
+    color: #C11B17
+}
 
 .news-item {
+    padding-left: 20px;
     margin-bottom: 10px;
     text-align: left;
 }
