@@ -131,6 +131,11 @@ ul {
     color: #ff9800;
 }
 
+.nav-list a.active {
+    color: #8bb3c4;
+}
+
+
 /* Banner styling */
 .banner {
     position: relative;
@@ -152,7 +157,7 @@ ul {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-family: 'Trebuchet MS', sans-serif;
+    font-family: 'Arial', sans-serif;
     font-size: 3.5vw;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
