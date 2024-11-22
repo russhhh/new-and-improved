@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Hare's Psychopathy Research</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <img src="images/image1.jpg" alt="Ice overlay banner">
+            <h1>Robert Hare | Psychopathy Research</h1>
+        </div>
+        <nav class="navbar">
+           <div class="nav-container">
+              <div class="menu-toggle" id="mobile-menu">
+                 <span class="bar"></span>
+                 <span class="bar"></span>
+                 <span class="bar"></span>
+           </div>
+         <ul class="nav-list">
+           <li><a href="index.html" title="Explore Dr. Hare’s pioneering work in psychopathy.">HOME</a></li>
+           <li><a href="about.html" title="Learn about Dr. Hare’s background and research focus." class="active">ABOUT</a></li>
+           <li><a href="pcl-r.html" title="Discover the Psychopathy Checklist-Revised and its uses.">PCL&#8209;R</a></li>
+           <li><a href="research.html" title="Access Dr. Hare’s publications and significant studies.">RESEARCH</a></li>
+           <li><a href="media.html" title="Review Dr. Hare’s published books and featured interviews.">MEDIA</a></li>
+           <li><a href="legacy.html" title="Read Dr. Hare’s reflections and personal insights.">LEGACY</a></li>
+           <li><a href="contact.html" title="Get in touch with Dr. Hare’s team for inquiries.">CONTACT</a></li>
+         </ul>
+        </div>
+      </nav>
+      <div class="tabs" style="margin: 0 auto;">
+            <div class="tab active" data-tab="publications">PUBLICATIONS</div>
+            <div class="tab" data-tab="psychopathy">PSYCHOPATHY</div>
+            <div class="tab" data-tab="criminal-psychology">CRIMINAL PSYCHOLOGY</div>
+            <div class="tab" data-tab="mental-health">MENTAL HEALTH</div>
+      </div>
+    </header>
+    <main class="content">
+        <div class="tab-content active" id="publications">
+            <h2>Publications</h2>
+            <p><span class="highlight">A plain-language guide to psychopathy for general audiences, clarifying common misconceptions</span>. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="tab-content" id="psychopathy">
+            <h2>Psychopathy</h2>
+            <p><span class="highlight">A plain-language guide to psychopathy for general audiences, clarifying common misconceptions</span>. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="tab-content" id="criminal-psychology" style="margin: auto;">
+            <h2>Criminal Psychology</h2>
+            <p><span class="highlight">Overview of the Psychopathy Checklist-Revised</span>.Explanation of its use in various contexts (criminal justice, mental health). Links to related research papers and guidelines for professionals.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="tab-content" id="mental-health" style="margin: auto;">
+            <h2>Mental Health</h2>
+            <p>Organized by topic or year. Access to summaries or full texts, where possible. Links to external journals or databases for detailed research.</p>
+        </div>
+    </main>
+    <footer class="footer">
+        <img src="images/hare-logo.jpg" alt="Hare Logo">
+        <p>&copy; Copyright Robert Hare 2025</p>
+    </footer>
+    <script>
+      const tabs = document.querySelectorAll('.tab');
+      const contents = document.querySelectorAll('.tab-content');
+
+      tabs.forEach(tab => {
+          tab.addEventListener('click', () => {
+              tabs.forEach(item => item.classList.remove('active'));
+              contents.forEach(content => content.classList.remove('active'));
+
+              tab.classList.add('active');
+              document.getElementById(tab.getAttribute('data-tab')).classList.add('active');
+          });
+      });
+
+      // Accordion functionality
+      const accordionHeaders = document.querySelectorAll('.accordion-header');
+      accordionHeaders.forEach(header => {
+          header.addEventListener('click', () => {
+              const content = header.nextElementSibling;
+              content.style.display = content.style.display === 'none' ? 'block' : 'none';
+          });
+      });
+
+      const mobileMenu = document.getElementById('mobile-menu');
+      const navList = document.querySelector('.nav-list');
+
+      mobileMenu.addEventListener('click', () => {
+         navList.classList.toggle('active');
+      });
+  </script>
+  <!-- Start of StatCounter Code -->
+  <script type="text/javascript" language="javascript">
+  var sc_project=1228587;
+  var sc_invisible=1;
+  var sc_partition=7;
+  var sc_security="690ba1c2";
+  </script>
+
+  <script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c8.statcounter.com/counter.php?sc_project=1228587&amp;java=0&amp;security=690ba1c2&amp;invisible=1" alt="hit counter code" border="0"></a> </noscript>
+  <!-- End of StatCounter Code -->
+
+</body>
+</html>
