@@ -16,48 +16,49 @@ header {
 }
 body {
     width: 100%;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Open Sans', 'Arial', sans-serif;
+    font-weight: 300; /* Default to regular weight */
     color: #333;
     background-color: #f9f9f9;
     line-height: 1.7;
 }
 h1 {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Open Sans', 'Arial', sans-serif;
     font-size: 3em;  /* Default size for larger screens */
     margin-bottom: 10px;
     white-space: nowrap; /* Prevent text wrapping */
 }
 
 h2 {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Open Sans', 'Arial', sans-serif;
     color: #073B4D;
     font-size: 1.8rem;
-    font-weight: 900;
+    font-weight: 700;
     margin-bottom: 10px;
 }
 
 h3 {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Open Sans', 'Arial', sans-serif;
     color: #3A3B3C;
     font-size: 1.3rem;
-    font-weight: 700;
+    font-weight: 600;
     margin-top: 20px;
     margin-bottom: 10px;
 }
 h4 {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Open Sans', 'Arial', sans-serif;
     color: #3A3B3C;
     font-size: 1.2rem;
-    font-weight: 700;
+    font-weight: 400;
     margin-top: 20px;
     margin-bottom: 10px;
 }
 
 p {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Open Sans', 'Arial', sans-serif;
   color: #3A3B3C;
   font-size: 1.1rem;
-  font-weight: 400;
+  font-weight: 300;
   margin-bottom: 15px;
 }
 li {
@@ -72,7 +73,7 @@ ul {
 /* Highlighted text styling */
 .highlight {
     font-size: 1.1rem;
-    font-weight: 900;
+    font-weight: 600;
 }
 /* Book text styling */
 .book {
@@ -123,7 +124,7 @@ ul {
 .nav-list a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
     transition: color 0.3s;
 }
 
@@ -157,7 +158,7 @@ ul {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-family: 'Arial', sans-serif;
+    font-family: 'Open Sans', 'Arial', sans-serif;
     font-size: 3.5vw;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
@@ -176,6 +177,7 @@ ul {
 
 .tab {
     flex: 1;
+    font-weight: 400;
     text-align: center;
     padding: 10px;
     background: #8bb3c4;
