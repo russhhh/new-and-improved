@@ -266,6 +266,11 @@ section {
     width: 100%;
 }
 
+.footer p {
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
 .footer img {
     width: 200px;
     height: auto;
