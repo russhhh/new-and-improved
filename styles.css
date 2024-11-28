@@ -237,6 +237,11 @@ ul {
     text-align: left;
 }
 
+.news-item p {
+    text-indent: -3ch; /* Negative indent for the first line */
+    padding-left: 5ch; /* Add space to offset subsequent lines */
+}
+
 /* Content section styling */
 .content {
     display: block;
@@ -245,7 +250,7 @@ ul {
     overflow-y: auto;
 }
 
-section {
+article {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -307,11 +312,11 @@ section {
 .toggle-button {
     position: absolute; /* Absolutely positioned inside .article-block */
     bottom: 10px; /* Position near the bottom of the block */
-    left: 50%;
-    transform: translateX(-50%);
+    right: 10px;
+    transform: none;
     z-index: 2; /* Places the button above the fade effect */
-    background-color: #1A6F85;
-    color: #fff;
+    background-color: #9bbfca;
+    color: #333;
     border-radius: 8px;
     padding: 5px 10px;
     cursor: pointer;
