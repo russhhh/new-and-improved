@@ -166,12 +166,12 @@ ul {
 
 /* Tabs styling */
 .tabs {
-    display: flex;
-    justify-content: center;
-    line-height: 1;
-    gap: 0em;
-    cursor: pointer;
-    margin-top: 0;
+    display: flex; /* Ensure tabs are in a row by default */
+    justify-content: center; /* Center align the tabs */
+    gap: 0px; /* Add spacing between tabs */
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .tab {
@@ -323,9 +323,70 @@ article {
     cursor: pointer;
 }
 
-/* Responsive styling */
-@media (max-width: 498px) {
-      body {
+.tabs-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto; /* Centers the container */
+}
+
+#tabs-mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+#tabs-mobile-menu .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #333;
+}
+
+@media (max-width: 768px) {
+    #tabs-mobile-menu {
+        display: block;
+    }
+
+    .tabs-container {
+        width: 100%; /* Ensures full width on smaller screens */
+    }
+
+    .tabs {
+        display: none; /* Hidden by default */
+        flex-direction: column; /* Stack items vertically for mobile */
+        align-items: flex-start;
+        background: #fff;
+        border: 1px solid #ddd;
+        padding: 10px;
+    }
+
+    .tabs.active {
+        display: flex; /* Shown when active */
+    }
+
+    .tabs .tab {
+        display: block;
+        width: 100%; /* Full width for mobile */
+        padding: 10px 45px;
+        text-align: left;
+        font-size: 16px;
+        font-weight: 400; /* Matches the nav-list style */
+        text-decoration: none; /* Remove underline */
+        color: #333; /* Text color */
+        border-bottom: 1px solid #ddd; /* Add a separator */
+    }
+
+    .tabs .tab:hover {
+        background-color: #f4f4f4; /* Hover effect similar to primary nav-list */
+        color: #000;
+    }
+
+    .tabs .tab:last-child {
+         border-bottom: none; /* Remove bottom border for the last tab */
+    }
+
+    body {
       width: 100%;
     }
     .banner {
@@ -374,6 +435,6 @@ article {
    }
 
    .nav-list a {
-       font-size: 3.5vw; /* Responsive font size */
+       font-size: 5vw; /* Responsive font size */
    }
 }
