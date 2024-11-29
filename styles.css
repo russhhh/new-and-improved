@@ -437,4 +437,24 @@ article {
    .nav-list a {
        font-size: 5vw; /* Responsive font size */
    }
+
+   /* Responsive video container */
+   .video-wrapper {
+       position: relative;
+       padding-bottom: 56.25%; /* Aspect ratio for 16:9 */
+       height: 0;
+       overflow: hidden;
+       max-width: 100%; /* Ensures the video does not exceed the container width */
+       background: #000; /* Optional: Add background color */
+   }
+
+   .video-wrapper iframe {
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       border: 0;
+   }
+
 }
