@@ -245,7 +245,7 @@ ul {
 /* Content section styling */
 .content {
     display: block;
-    max-width: 900px;
+    max-width: 850px;
     margin: 300px auto 0;
     overflow-y: auto;
 }
@@ -342,7 +342,7 @@ article {
     background-color: #333;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 899px) {
     #tabs-mobile-menu {
         display: block;
     }
