@@ -316,7 +316,6 @@ article {
     transform: none;
     z-index: 2; /* Places the button above the fade effect */
     background-color: #9bbfca;
-    color: #333;
     border: outset;
     border-radius: 8px;
     padding: 5px 10px;
