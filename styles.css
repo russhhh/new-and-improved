@@ -405,6 +405,15 @@ article {
        background-color: #333; /* Transparent navbar */
    }
 
+   .menu-title {
+      float: right;
+      color: #f9f9f9;
+      font-weight: 600;
+      font-size: 1.3rem;
+      line-height: 1; /* Ensures vertical alignment */
+      margin: 0; /* Prevents unnecessary spacing */
+  }
+
    .menu-toggle {
       display: flex; /* Show hamburger on small devices */
       position: absolute;
