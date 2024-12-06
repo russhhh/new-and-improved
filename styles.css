@@ -20,7 +20,7 @@ body {
     font-weight: 300; /* Default to regular weight */
     color: #333;
     background-color: #f9f9f9;
-    line-height: 1.7;
+    line-height: 1.5;
 }
 h1 {
     font-family: 'Open Sans', 'Arial', sans-serif;
@@ -39,17 +39,17 @@ h2 {
 
 h3 {
     font-family: 'Open Sans', 'Arial', sans-serif;
-    color: #3A3B3C;
+    color: #073B4D;
     font-size: 1.3rem;
-    font-weight: 600;
+    font-weight: 700;
     margin-top: 20px;
     margin-bottom: 10px;
 }
 h4 {
     font-family: 'Open Sans', 'Arial', sans-serif;
-    color: #3A3B3C;
+    color: #073B4D;
     font-size: 1.2rem;
-    font-weight: 400;
+    font-weight: 600;
     margin-top: 20px;
     margin-bottom: 10px;
 }
@@ -57,22 +57,27 @@ h4 {
 p {
   font-family: 'Open Sans', 'Arial', sans-serif;
   color: #3A3B3C;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 300;
   margin-bottom: 15px;
 }
 li {
-  font-size: 1.1rem;
-  font-weight: 400;
+  font-size: 1rem;
+  font-weight: 300;
   padding-bottom: 1em;
 }
 ul {
+  padding-left: 25px;
+  list-style-type:disc
+}
+
+ol {
   padding-left: 25px;
 }
 
 /* Highlighted text styling */
 .highlight {
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 600;
 }
 /* Book text styling */
@@ -258,6 +263,10 @@ article {
     margin-bottom: 20px;
 }
 
+hr {
+   color: #9bbfca;
+   margin: 2rem 0;
+}
 
 /* Footer styling */
 .footer {
