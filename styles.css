@@ -86,6 +86,16 @@ ol {
     font-weight: 600;
 }
 
+/* Hare text styling */
+.hare {
+  font-family: 'Merriweather', serif;
+  color: #3A3B3C;
+}
+
+/* Light Paragraphs for tab headers */
+.light {
+  font-weight: 300;
+}
 
 /* Navbar container */
 .nav-container {
@@ -292,7 +302,7 @@ hr {
 }
 .article-block {
     position: relative;
-    max-height: 400px;
+    max-height: 250px;
     overflow: hidden;
     transition: max-height 0.5s ease;
 }
