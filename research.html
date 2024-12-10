@@ -107,47 +107,57 @@
         <p>&copy; Copyright Robert Hare 2025</p>
     </footer>
     <script>
-    // Primary navigation functionality
-  const mobileMenu = document.getElementById('mobile-menu');
-  const navList = document.querySelector('.nav-list');
+        // Primary navigation functionality
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navList = document.querySelector('.nav-list');
 
-   mobileMenu.addEventListener('click', () => {
-    navList.classList.toggle('active');
-   });
+        mobileMenu.addEventListener('click', () => {
+            // Close tabs menu if it's open
+            if (tabsList.classList.contains('active')) {
+                tabsList.classList.remove('active');
+            }
+            // Toggle primary nav menu
+            navList.classList.toggle('active');
+        });
 
-   // Secondary tab menu functionality
-   const tabsMobileMenu = document.getElementById('tabs-mobile-menu');
-   const tabsList = document.querySelector('.tabs');
-   const tabItems = document.querySelectorAll('.tabs .tab');
-   const tabContents = document.querySelectorAll('.tab-content');
+        // Secondary tab menu functionality
+        const tabsMobileMenu = document.getElementById('tabs-mobile-menu');
+        const tabsList = document.querySelector('.tabs');
+        const tabItems = document.querySelectorAll('.tabs .tab');
+        const tabContents = document.querySelectorAll('.tab-content');
 
-   // Toggle tabs menu on hamburger menu click
-   tabsMobileMenu.addEventListener('click', () => {
-    tabsList.classList.toggle('active');
-   });
+        // Toggle tabs menu on hamburger menu click
+        tabsMobileMenu.addEventListener('click', () => {
+            // Close primary nav menu if it's open
+            if (navList.classList.contains('active')) {
+                navList.classList.remove('active');
+            }
+            // Toggle tabs menu
+            tabsList.classList.toggle('active');
+        });
 
-   // Update active tab and collapse menu after selection
-   tabItems.forEach(tab => {
-    tab.addEventListener('click', () => {
-        // Update active tab
-        tabItems.forEach(item => item.classList.remove('active'));
-        tab.classList.add('active');
+        // Update active tab and collapse menu after selection
+        tabItems.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Update active tab
+                tabItems.forEach(item => item.classList.remove('active'));
+                tab.classList.add('active');
 
-        // Update active content
-        tabContents.forEach(content => content.classList.remove('active'));
-        const targetContent = document.getElementById(tab.getAttribute('data-tab'));
-        if (targetContent) {
-            targetContent.classList.add('active');
-        }
+                // Update active content
+                tabContents.forEach(content => content.classList.remove('active'));
+                const targetContent = document.getElementById(tab.getAttribute('data-tab'));
+                if (targetContent) {
+                    targetContent.classList.add('active');
+                }
 
-        // Collapse tabs menu in mobile view
-        if (window.innerWidth <= 768) {
-            tabsList.classList.remove('active');
-        }
-    });
-   });
+                // Collapse tabs menu in mobile view
+                if (window.innerWidth <= 768) {
+                    tabsList.classList.remove('active');
+                }
+            });
+        });
+    </script>
 
-  </script>
   <!-- Start of StatCounter Code -->
   <script type="text/javascript" language="javascript">
   var sc_project=1228587;
