@@ -361,9 +361,17 @@ hr {
     background-color: #333;
 }
 
+.menu-title {
+    display: none; /* Hidden by default */
+}
+
 @media (max-width: 899px) {
     #tabs-mobile-menu {
         display: block;
+    }
+
+    .menu-title {
+        display: block; /* Show only on smaller screens */
     }
 
     .tabs-container {
