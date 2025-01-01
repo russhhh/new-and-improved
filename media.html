@@ -70,7 +70,7 @@
             <p><span class="highlight">Why the Book?</span><br>Hare and Babiak recognized a growing need to address the increasing prevalence of corporate malfeasance and the role psychopathic individuals play in such environments. While psychopaths are often linked to crime and violence, Hare and Babiak identified that their traits—charm, manipulation, deceit, and lack of remorse—are equally dangerous in workplaces where they exploit hierarchies and systems for personal gain.</p>
             <p><span class="highlight">The Collaboration</span><br>Paul Babiak brought years of experience in studying organizational behavior and workplace dynamics. Together, they developed the "B-Scan" tool to measure psychopathy in workplace settings, a groundbreaking effort to apply psychopathy research beyond criminal contexts. Their joint work examined how psychopathic individuals maneuver within corporate environments, charming superiors while sabotaging colleagues, creating a “snakes in suits” analogy that resonated widely​​.</p>
             <p><span class="highlight">Unique Format</span><br>The book alternates between analytical chapters explaining psychopathy’s traits and tactics in professional settings, and narrative chapters that follow "Dave," a fictional corporate psychopath. This narrative approach vividly illustrates how a psychopath might manipulate colleagues, exploit workplace systems, and charm superiors, providing readers with a relatable, story-driven lens to understand the real-world application of the book's insights. By combining science with storytelling, Snakes in Suits effectively educates while engaging readers, making complex psychological concepts accessible and memorable.</p>
-            <h3>Listen to a discussion of >Snakes in Suits</h3>
+            <h3>Listen to a discussion of <em>Snakes in Suits</em></h3>
               <!-- Audio Element -->
               <audio controls>
               <source src="https://hare.org/audio/snakes-in-suits.wav" type="audio/wav">
@@ -241,23 +241,18 @@
         navList.classList.toggle('active');
     });
 
-    // Secondary tab menu functionality
+    // Tabs menu toggle functionality
     const tabsMobileMenu = document.getElementById('tabs-mobile-menu');
     const tabsList = document.querySelector('.tabs');
     const tabItems = document.querySelectorAll('.tabs .tab');
     const tabContents = document.querySelectorAll('.tab-content');
 
-    // Toggle tabs menu on hamburger menu click
+    // Toggle the tabs menu on hamburger menu click
     tabsMobileMenu.addEventListener('click', () => {
-        // Close primary nav menu if it's open
-        if (navList.classList.contains('active')) {
-            navList.classList.remove('active');
-        }
-        // Toggle tabs menu
-        tabsList.classList.toggle('active');
+        tabsList.classList.toggle('active'); // Show or hide the tabs menu
     });
 
-    // Update active tab and collapse menu after selection
+    // Handle tab selection
     tabItems.forEach(tab => {
         tab.addEventListener('click', () => {
             // Update active tab
@@ -271,8 +266,8 @@
                 targetContent.classList.add('active');
             }
 
-            // Collapse tabs menu in mobile view
-            if (window.innerWidth <= 768) {
+            // Close the tabs menu after a selection
+            if (tabsList.classList.contains('active')) {
                 tabsList.classList.remove('active');
             }
         });
