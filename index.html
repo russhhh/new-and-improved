@@ -44,7 +44,7 @@
                 <p><i class="fa-solid fa-flag fa-lg" style="color: #C11B17"></i>Jan. 1, 2025 – New website launched.</p>
             </div>
             <div class="news-item">
-                <p><i class="fa-solid fa-flag fa-lg" style="color: #C11B17"></i>Jan. 1, 2025 – Need content from the old website? Use the <a href="https://web.archive.org/web/20231114064008/http://www.hare.org/index.html">Wayback Machine</a> archive.</p>
+                <p><i class="fa-solid fa-flag fa-lg" style="color: #C11B17"></i>Jan. 1, 2025 – Need content from the old website? Use the <a href="https://web.archive.org/web/20231114064008/http://www.hare.org/index.html target=new">Wayback Machine</a> archive.</p>
             </div>
         </div>
 
@@ -71,16 +71,27 @@
           </article>
         </div>
 
-          <div>
             <article style="background-color: #9bbfca80;">
             <h2>Authorship of Website</h2>
               <p>This website serves as a platform for Dr. Robert Hare to share his insights, reflections, and research on psychopathy. Sections authored by Dr. Hare are marked with the byline: <span class="hare">“by Robert Hare.”</span></p>
-              <p>Additional content is curated by the Website Editor, using generative AI tools to synthesize material from Dr. Hare’s research, publications, and notes. Dr. Hare personally reviews and approves all content to ensure accuracy and alignment with his expertise.</p>
-              <p>Unless explicitly marked with Dr. Hare’s byline, you can assume the content has been developed by the Website Editor under his guidance. For questions, please contact <a href="mailto:admin@hare.org">admin@hare.org</a>.</p>
+              <p>Additional content is curated by the website editor—<a href="#about-modal" id="about-link">Rus Hathaway</a>, using generative AI tools to synthesize material from Dr. Hare’s research, publications, and notes. Dr. Hare personally reviews and approves all content to ensure accuracy and alignment with his expertise.</p>
+              <p>Unless explicitly marked with Dr. Hare’s byline, you can assume the content has been developed by the website editor under his guidance.</p>
               <p>Thank you for visiting, and we hope this site deepens your understanding of psychopathy.</p>
             </article>
-          </div>
+            <div id="about-modal" class="modal">
+             <div class="modal-content">
+              <span class="close">&times;</span>
+               <h3>Website editor: Rus Hathaway</h3>
+               <p><a href="https://www.linkedin.com/in/rushathaway/ target=new">Rus Hathaway</a> never planned to change the world of education, but he did anyway. Back in 1992, while the rest of us were still marveling at fax machines, Rus launched CyberHigh, Canada’s first fully virtual school. Imagine that—school without walls, lockers, or that odd smell in the cafeteria. Just a radical idea: learning, anywhere, anytime. Rus moved on in 1998, but CyberHigh has kept going, quietly becoming a lifeline for students who don’t fit the mold of traditional classrooms.</p>
+              <p>After CyberHigh, Rus didn’t stop moving. He earned a Master's in Education Leadership, designed curriculum for Southwest Airlines (teaching pilots to use flight automation), and wrote industrial documentation for Mammoet, the company that moves stuff so massive it’s basically playing Tetris with the planet. From there, he found his groove in higher ed, designing learning experiences at MacEwan University, the University of Alberta, and the University of Washington.</p>
+              <p>Rus’s work on Coursera feels like a love letter to anyone who ever Googled “how to learn [insert skill] for free.” He’s created MOOCs that resonate globally, including <a class="highlight" href="https://www.coursera.org/specializations/product-management" target=new>Software Product Management</a>, <a class="highlight" href="https://www.coursera.org/specializations/software-design-architecture?" target=new>Software Design Architecture</a>, <a class="highlight" href="https://www.coursera.org/learn/black-holes-astro-101?" target=new>Astro 101: Black Holes</a>, and <a class="highlight" href="https://www.coursera.org/learn/bugs-101" target=new>Bugs 101: Insect-Human Interactions</a> (University of Alberta), and <a class="highlight" href="https://www.coursera.org/learn/machine-teaching-ai" target=new>Machine Teaching for Autonomous AI</a>, <a class="highlight" href="https://www.coursera.org/learn/designing-autonomous-ai?" target=new>Designing Autonomous AI</a> (University of Washington). His latest, <span class="highlight">Building Webpages with HTML & CSS</span> gave Rus the tools to build this website, his first web project! It’s where learning design, web development, and the art of preserving a legacy intersect.</p>
+              <p>Now, Rus is leaning into generative AI, not because it’s trendy, but because it feels inevitable. The way he sees it, education is less about teaching facts and more about teaching people how to live in a world that’s constantly rewriting itself. And if that means using AI to do it, well, why not?</p>
+            </div>
+
+
     </main>
+
+  </div>
     <footer class="footer">
           <img src="images/hare-logo.jpg" alt="Hare Logo">
           <p>&copy; Copyright Robert Hare 2025</p>
@@ -101,6 +112,30 @@
           });
       });
         </script>
+        <script>
+        // Get modal and link
+const modal = document.getElementById("about-modal");
+const link = document.getElementById("about-link");
+const closeBtn = document.querySelector(".close");
+
+// Show modal on link click
+link.addEventListener("click", (event) => {
+    event.preventDefault(); // Prevent default anchor behavior
+    modal.style.display = "block";
+});
+
+// Hide modal on close button click
+closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+});
+
+// Hide modal on outside click
+window.addEventListener("click", (event) => {
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+});
+</script>
         <!-- Start of StatCounter Code -->
         <script>
         var sc_project=1228587;

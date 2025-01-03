@@ -75,6 +75,50 @@ ol {
   padding-left: 25px;
 }
 
+/* Modal styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Keeps the modal floating above the page */
+    z-index: 1000; /* Ensures it appears above other elements */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    overflow: hidden; /* Prevent scrolling inside the modal */
+}
+
+/* Modal content styling */
+.modal-content {
+    position: fixed; /* Makes the modal content float */
+    background-color: #fff; /* Background color for the modal */
+    margin: auto; /* Center horizontally */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust position to truly center */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Adjust modal width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    border-radius: 10px; /* Optional: Rounded corners */
+}
+
+/* Close button styling */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+
 /* Highlighted text styling */
 .highlight {
     font-size: 1rem;
