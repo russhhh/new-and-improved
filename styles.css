@@ -85,22 +85,37 @@ ol {
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    overflow: hidden; /* Prevent scrolling inside the modal */
+    overflow-y: auto; /* Allow scrolling within the modal */
 }
 
 /* Modal content styling */
 .modal-content {
-    position: fixed; /* Makes the modal content float */
+    position: relative; /* Relative positioning for internal elements */
     background-color: #fff; /* Background color for the modal */
-    margin: auto; /* Center horizontally */
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Adjust position to truly center */
+    margin: 10% auto; /* Center horizontally and add space from the top */
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Adjust modal width */
+    width: 90%; /* Adjust width for smaller screens */
+    max-width: 600px; /* Limit maximum width for larger screens */
+    max-height: 90%; /* Ensure the modal doesn’t exceed the viewport height */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
     border-radius: 10px; /* Optional: Rounded corners */
+    overflow-y: auto; /* Enable scrolling within the modal if content overflows */
+}
+
+/* Close button styling */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
 }
 
 /* Close button styling */
@@ -515,6 +530,11 @@ hr {
    .nav-list a {
        font-size: 5vw; /* Responsive font size */
    }
+   .modal-content {
+    margin: 5% auto; /* Reduce top margin for smaller screens */
+    padding: 15px; /* Adjust padding */
+    font-size: 90%; /* Slightly smaller text for readability */
+}
 
    /* Responsive video container */
    .video-wrapper {
