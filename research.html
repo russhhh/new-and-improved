@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Studies and essays on psychopathy research, from its history to its role in criminal justice and mental health.">
   <title>Dr. Hare's Psychopathy Research</title>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
@@ -16,11 +17,11 @@
         <nav class="navbar">
            <div class="nav-container">
              <span class="menu-title">RESEARCH</span>
-              <div class="menu-toggle" id="mobile-menu">
+              <button class="menu-toggle" id="mobile-menu" aria-label="Toggle navigation menu" aria-expanded="false">
                  <span class="bar"></span>
                  <span class="bar"></span>
                  <span class="bar"></span>
-           </div>
+           </button>
          <ul class="nav-list">
            <li><a href="index.html" title="Explore Dr. Hare’s pioneering work in psychopathy.">HOME</a></li>
            <li><a href="about.html" title="Learn about Dr. Hare’s background and research focus.">ABOUT</a></li>
@@ -33,16 +34,16 @@
         </div>
       </nav>
       <div class="tabs-container">
-          <div class="menu-toggle" id="tabs-mobile-menu">
+          <button class="menu-toggle" id="tabs-mobile-menu" aria-label="Toggle section menu" aria-expanded="false">
               <span class="bar"></span>
               <span class="bar"></span>
               <span class="bar"></span>
-          </div>
+          </button>
           <div class="tabs">
-            <div class="tab active" data-tab="studies">STUDIES</div>
-            <div class="tab" data-tab="psychopathy">PSYCHOPATHY</div>
-            <div class="tab" data-tab="criminal-psychology">CRIMINAL PSYCHOLOGY</div>
-            <div class="tab" data-tab="mental-health">MENTAL HEALTH</div>
+            <button class="tab active" data-tab="studies">STUDIES</button>
+            <button class="tab" data-tab="psychopathy">PSYCHOPATHY</button>
+            <button class="tab" data-tab="criminal-psychology">CRIMINAL PSYCHOLOGY</button>
+            <button class="tab" data-tab="mental-health">MENTAL HEALTH</button>
       </div>
     </div>
     </header>
@@ -63,7 +64,7 @@
             <p>For centuries, the concept of psychopathy—evil without madness—has haunted humanity. From tales of ruthless rulers to cunning con artists, psychopathy has always lurked in the shadows. But understanding it? That’s a story centuries in the making.</p>
 
             <h3>Early Conceptualizations (Late 18th - 19th Century)</h3>
-            <p><span class="highlight">The Curious Cases of Pinel and Rush</span><br>The year is 1809. Inside the imposing walls of France's Salpêtrière Asylum, psychiatrist Philippe Pinel confronts something new: a patient who acts cruelly, remorselessly—but isn’t "insane" in the usual sense. He is clear-headed, even persuasive, yet his actions are unfathomably callous. Pinel coins a strange term: manie sans délire—"insanity without delirium." He has no idea he’s describing what future generations will call psychopathy.<p>
+            <p><span class="highlight">The Curious Cases of Pinel and Rush</span><br>The year is 1809. Inside the imposing walls of France's Salpêtrière Asylum, psychiatrist Philippe Pinel confronts something new: a patient who acts cruelly, remorselessly—but isn’t "insane" in the usual sense. He is clear-headed, even persuasive, yet his actions are unfathomably callous. Pinel coins a strange term: manie sans délire—"insanity without delirium." He has no idea he’s describing what future generations will call psychopathy.</p>
               <p>Across the Atlantic, Benjamin Rush, one of America’s Founding Fathers and a trailblazer in psychiatry, makes a similar observation. Criminals, he argues, aren’t just sinners—they might be mentally ill, driven by something deeper than mere wickedness.</p>
               <p><span class="highlight">Prichard and the Moral Wasteland</span><br>Enter James Cowles Prichard, a British physician and moral philosopher. In 1835, he publishes A Treatise on Insanity, proposing that certain people suffer from moral insanity. They seem perfectly rational—but their moral compass is shattered. They lie, cheat, and harm without remorse. Prichard’s concept will echo through psychiatric history, though it will take decades for science to catch up.</p>
               <p><span class="highlight">Koch's Fatalistic Vision</span><br>By the late 1800s, psychiatry takes a darker turn. German physician J.C. Koch declares such people victims of psychopathic inferiority, an inescapable biological defect. His grim view hints at modern debates on genetics, fate, and free will—but in the 19th century, it only deepens society’s unease.</p>
@@ -106,7 +107,7 @@
                 <p>In parole hearings, PCL-R assessments provide a structured way to evaluate an inmate’s readiness for reintegration. For example, a parole board may consider an inmate with a PCL-R score of 34—a score reflecting significant psychopathic traits. The evaluation might reveal a pattern of manipulative behavior and shallow emotional engagement, leading the board to prioritize public safety over early release.</p>
                 <h4>Challenges and Ethical Considerations</h4>
                 <p>Despite its utility, reliance on the PCL-R raises ethical questions. Critics argue that overemphasis on psychopathy scores might overshadow individual progress, such as participation in rehabilitation programs. The challenge lies in balancing predictive data with fairness and humanity, ensuring that high scores do not unjustly predetermine an individual’s fate.</p>
-                <button class="toggle-button">Read More</button>
+                <button class="toggle-button" aria-expanded="false">Read More</button>
             </article>
             <article class="article-block">
               <h3>The Ethics of Psychopathy Assessments in Courtrooms</h3>
@@ -117,7 +118,7 @@
                 <p>Labeling someone as a "psychopath" carries lifelong consequences. A high PCL-R score can lead to harsher sentencing, denial of parole, and social stigma. These outcomes highlight the need for ethical rigor in administration and interpretation. Trained evaluators must ensure that their assessments are objective, relying on empirical evidence rather than subjective impressions.</p>
                 <h4>Judicial Use and Misuse</h4>
                 <p>Judges and jurors may misinterpret the nuances of PCL-R scores, viewing them as definitive predictions rather than probability estimates. This underscores the importance of expert testimony that communicates the instrument’s limitations and avoids overstating its findings.</p>
-            <button class="toggle-button">Read More</button>
+            <button class="toggle-button" aria-expanded="false">Read More</button>
             </article>
             <article class="article-block">
               <h3>Reducing Recidivism: The PCL-R’s Role in Risk Management</h3>
@@ -126,7 +127,7 @@
                 <p>Offenders scoring high on the PCL-R often exhibit traits—such as impulsivity and lack of remorse—that undermine traditional rehabilitation efforts. Recognizing these traits enables correctional programs to design targeted interventions, focusing on behavioral management rather than empathy-driven therapies, which are less effective for psychopathic individuals.</p>
                 <h4>Technology and Innovation</h4>
                 <p>Emerging tools, such as machine learning models integrated with PCL-R assessments, promise to refine risk predictions further. These advancements can improve the allocation of resources, ensuring intensive monitoring for high-risk individuals while supporting the reintegration of low-risk offenders.</p>
-            <button class="toggle-button">Read More</button>
+            <button class="toggle-button" aria-expanded="false">Read More</button>
             </article>
             <article class="article-block">
               <h3>Psychopathy and Public Policy: Shaping Laws and Practices</h3>
@@ -135,7 +136,7 @@
                 <p>Jurisdictions across the globe have adopted risk assessment frameworks that incorporate PCL-R scores. These frameworks help standardize sentencing decisions, reducing disparities while focusing on public safety.</p>
                 <h4>Civil Commitment and High-Risk Offenders</h4>
                 <p>In cases involving sexually violent predators, PCL-R assessments often underpin decisions regarding civil commitment. High scores on the PCL-R’s affective and antisocial dimensions justify continued detention or specialized treatment programs, even after an offender’s formal sentence has ended.</p>
-            <button class="toggle-button">Read More</button>
+            <button class="toggle-button" aria-expanded="false">Read More</button>
             </article>
             <article>
               <h3>A Call to Action for Criminal Justice Professionals</h3>
@@ -160,7 +161,7 @@
                   <p>Psychopathy resists conventional therapeutic approaches due to its defining traits. Individuals with psychopathy often lack the emotional depth required for empathy-based interventions and may manipulate therapists or disrupt group dynamics. The PCL-R helps mental health professionals recognize these tendencies, ensuring that treatment plans emphasize behavioral management rather than emotional connection.</p>
                 <h4>Improving Outcomes in Mental Health Settings</h4>
                   <p>By incorporating PCL-R assessments, clinicians can design strategies that mitigate risks, such as structured environments, consistent boundaries, and interventions focusing on immediate behavior rather than deep-seated emotional change. This approach enhances patient outcomes while maintaining the safety and stability of therapeutic settings.</p>
-                <button class="toggle-button">Read More</button>
+                <button class="toggle-button" aria-expanded="false">Read More</button>
               </article>
               <article class="article-block">
                 <h3>Ethical Considerations in the Use of the PCL-R in Mental Health</h3>
@@ -171,8 +172,7 @@
                 <p>The PCL-R evaluates traits that are inherently negative, such as manipulativeness and lack of remorse. Mental health professionals must remain objective, focusing on the behaviors rather than moral judgments. This balance is critical for maintaining trust and facilitating therapeutic progress.</p>
                 <h4>Ensuring Proper Use by Trained Professionals</h4>
                 <p>Given its complexity, the PCL-R should only be administered by licensed mental health experts with specialized training. Misuse or misinterpretation can lead to improper diagnoses, ineffective treatments, and ethical breaches.</p>
-
-                <button class="toggle-button">Read More</button>
+                <button class="toggle-button" aria-expanded="false">Read More</button>
               </article>
               <article class="article-block">
                 <h3>Psychopathy and Risk Management in Psychiatric Facilities</h3>
@@ -188,7 +188,7 @@
                  <p>Psychopathy’s traits, particularly in the interpersonal and affective dimensions, can lead to institutional instability. High-PCL-R patients may attempt to create divisions among staff or dominate group therapy settings. Awareness of these risks enables institutions to maintain cohesive and safe environments.</p>
                 <h4>Enhancing Staff Training</h4>
                  <p>Equipping staff with knowledge about psychopathy and the PCL-R fosters better patient management. Training sessions can include strategies for de-escalating conflicts, recognizing manipulative tactics, and maintaining professional boundaries.</p>
-                <button class="toggle-button">Read More</button>
+                <button class="toggle-button" aria-expanded="false">Read More</button>
               </article>
               <article class="article-block">
                 <h3>The Future of Psychopathy Research in Mental Health</h3>
@@ -199,7 +199,7 @@
                 <p>While the PCL-R is most often used in forensic or institutional settings, its principles are increasingly being applied in community mental health programs. Early identification of psychopathic traits in at-risk populations allows for preventive measures, potentially mitigating harmful behaviors before they escalate.</p>
                 <h4>Integrating Technology with Psychopathy Assessment</h4>
                 <p>Emerging tools, such as AI-driven behavioral analysis and digital monitoring systems, promise to refine psychopathy assessments. Combined with the PCL-R, these technologies could provide more accurate risk evaluations and support the development of personalized treatment plans.</p>
-                <button class="toggle-button">Read More</button>
+                <button class="toggle-button" aria-expanded="false">Read More</button>
               </article>
               <article>
                 <h3>A Vision for Ethical and Effective Mental Health Practices</h3>
@@ -223,6 +223,7 @@
             }
             // Toggle primary nav menu
             navList.classList.toggle('active');
+           mobileMenu.setAttribute('aria-expanded', navList.classList.contains('active'));
         });
 
         // Tabs menu toggle functionality
@@ -234,6 +235,7 @@
         // Toggle the tabs menu on hamburger menu click
         tabsMobileMenu.addEventListener('click', () => {
             tabsList.classList.toggle('active'); // Show or hide the tabs menu
+            tabsMobileMenu.setAttribute('aria-expanded', tabsList.classList.contains('active'));
         });
 
         // Handle tab selection
@@ -256,14 +258,28 @@
                 }
             });
         });
+
+        // If the page is opened with a #hash link, activate the tab containing it
+        if (location.hash) {
+            const hashTarget = document.getElementById(location.hash.slice(1));
+            const pane = hashTarget ? hashTarget.closest('.tab-content') : null;
+            if (pane) {
+                tabContents.forEach(content => content.classList.remove('active'));
+                pane.classList.add('active');
+                tabItems.forEach(item => item.classList.toggle('active', item.getAttribute('data-tab') === pane.id));
+                hashTarget.scrollIntoView();
+            }
+        }
     </script>
     <script>
     document.querySelectorAll('.toggle-button').forEach(button => {
-    button.addEventListener('click', function() {
-        const articleBlock = this.parentElement;
-        articleBlock.classList.toggle('expanded');
-        this.textContent = articleBlock.classList.contains('expanded') ? 'Read Less' : 'Read More';
-    });
+      button.addEventListener('click', function () {
+      const articleBlock = this.parentElement;
+      articleBlock.classList.toggle('expanded');
+      this.textContent = articleBlock.classList.contains('expanded') ? 'Read Less' : 'Read More';
+      this.setAttribute('aria-expanded', articleBlock.classList.contains('expanded'));
+  });
+
 });
     </script>
 
@@ -275,7 +291,7 @@
   var sc_security="690ba1c2";
   </script>
 
-  <script src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c8.statcounter.com/counter.php?sc_project=1228587&amp;java=0&amp;security=690ba1c2&amp;invisible=1" alt="hit counter code"></a> </noscript>
+  <script src="https://www.statcounter.com/counter/counter.js"></script><noscript><a href="https://www.statcounter.com/" target="_blank"><img  src="https://c.statcounter.com/counter.php?sc_project=1228587&amp;java=0&amp;security=690ba1c2&amp;invisible=1" alt="hit counter code"></a> </noscript>
   <!-- End of StatCounter Code -->
 
 </body>

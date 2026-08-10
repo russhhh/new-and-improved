@@ -8,11 +8,10 @@ header {
     width: 100%;           /* Make the header take up the full width of the screen */
     margin: 0;             /* Remove any default margin */
     padding: 0;            /* Remove any padding if not needed */
-    position: fixed;
+    position: sticky;      /* Stays in the page flow, so no margin compensation needed below */
     top: 0;
-    left: 0;
-    right: 0;
     z-index: 3;
+    background-color: #f9f9f9;
 }
 body {
     width: 100%;
@@ -118,21 +117,6 @@ ol {
     text-decoration: none;
 }
 
-/* Close button styling */
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-}
-
 
 /* Highlighted text styling */
 .highlight {
@@ -166,12 +150,15 @@ ol {
     position: relative;
 }
 
-/* Hamburger menu */
+/* Hamburger menu (a <button>, so it works with keyboard and screen readers) */
 .menu-toggle {
     display: none;
     position: absolute;
     flex-direction: column;
     cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 0;
 }
 
 .menu-toggle .bar {
@@ -215,7 +202,7 @@ ol {
     position: relative;
     text-align: center;
     color: white;
-    width: 100vw;
+    width: 100%;
     height: 18vh;
     overflow: hidden;
 }
@@ -250,12 +237,16 @@ ol {
 
 .tab {
     flex: 1;
+    font: inherit;
     font-weight: 400;
+    color: #333;
     text-align: center;
     padding: 10px;
     background: #8bb3c4;
+    border: none;
     border-bottom: 2px solid #666;
     transition: background 0.3s ease;
+    cursor: pointer;
 }
 
 .tab:hover {
@@ -320,7 +311,7 @@ ol {
 .content {
     display: block;
     max-width: 850px;
-    margin: 300px auto 0;
+    margin: 20px auto 0;
     overflow-y: auto;
 }
 
@@ -485,7 +476,7 @@ hr {
         padding: 10px;  /* Optional: add padding to make the text more readable */
     }
     .content {
-      margin-top: 20vh;
+      margin-top: 20px;
     }
 
     .nav-container {

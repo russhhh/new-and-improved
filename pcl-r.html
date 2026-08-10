@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="An introduction to psychopathy and the Psychopathy Checklist-Revised (PCL-R), the international standard for assessing psychopathy.">
   <title>PCL-R & Psychopathy</title>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
@@ -16,11 +17,11 @@
         <nav class="navbar">
            <div class="nav-container">
              <span class="menu-title">PSYCHOPATHY & PCL-R</span>
-              <div class="menu-toggle" id="mobile-menu">
+              <button class="menu-toggle" id="mobile-menu" aria-label="Toggle navigation menu" aria-expanded="false">
                  <span class="bar"></span>
                  <span class="bar"></span>
                  <span class="bar"></span>
-           </div>
+           </button>
          <ul class="nav-list">
            <li><a href="index.html" title="Explore Dr. Hare’s pioneering work in psychopathy.">HOME</a></li>
            <li><a href="about.html" title="Learn about Dr. Hare’s background and research focus.">ABOUT</a></li>
@@ -33,15 +34,15 @@
         </div>
       </nav>
       <div class="tabs-container">
-          <div class="menu-toggle" id="tabs-mobile-menu">
+          <button class="menu-toggle" id="tabs-mobile-menu" aria-label="Toggle section menu" aria-expanded="false">
               <span class="bar"></span>
               <span class="bar"></span>
               <span class="bar"></span>
-          </div>
+          </button>
           <div class="tabs">
-            <div class="tab active" data-tab="psychopathy-101">PSYCHOPATHY 101</div>
-            <div class="tab" data-tab="pcl-r">PCL-R</div>
-            <div class="tab" data-tab="research-and-publications">RESEARCH & PUBLICATIONS</div>
+            <button class="tab active" data-tab="psychopathy-101">PSYCHOPATHY 101</button>
+            <button class="tab" data-tab="pcl-r">PCL-R</button>
+            <button class="tab" data-tab="research-and-publications">RESEARCH & PUBLICATIONS</button>
       </div>
     </div>
     </header>
@@ -355,6 +356,7 @@
             }
             // Toggle primary nav menu
             navList.classList.toggle('active');
+           mobileMenu.setAttribute('aria-expanded', navList.classList.contains('active'));
         });
 
         // Tabs menu toggle functionality
@@ -366,6 +368,7 @@
         // Toggle the tabs menu on hamburger menu click
         tabsMobileMenu.addEventListener('click', () => {
             tabsList.classList.toggle('active'); // Show or hide the tabs menu
+            tabsMobileMenu.setAttribute('aria-expanded', tabsList.classList.contains('active'));
         });
 
         // Handle tab selection
@@ -388,6 +391,18 @@
                 }
             });
         });
+
+        // If the page is opened with a #hash link, activate the tab containing it
+        if (location.hash) {
+            const hashTarget = document.getElementById(location.hash.slice(1));
+            const pane = hashTarget ? hashTarget.closest('.tab-content') : null;
+            if (pane) {
+                tabContents.forEach(content => content.classList.remove('active'));
+                pane.classList.add('active');
+                tabItems.forEach(item => item.classList.toggle('active', item.getAttribute('data-tab') === pane.id));
+                hashTarget.scrollIntoView();
+            }
+        }
     </script>
 <script>
    // Read More functionality
@@ -407,7 +422,7 @@
   var sc_security="690ba1c2";
   </script>
 
-  <script src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c8.statcounter.com/counter.php?sc_project=1228587&amp;java=0&amp;security=690ba1c2&amp;invisible=1" alt="hit counter code"></a> </noscript>
+  <script src="https://www.statcounter.com/counter/counter.js"></script><noscript><a href="https://www.statcounter.com/" target="_blank"><img  src="https://c.statcounter.com/counter.php?sc_project=1228587&amp;java=0&amp;security=690ba1c2&amp;invisible=1" alt="hit counter code"></a> </noscript>
   <!-- End of StatCounter Code -->
 
 </body>

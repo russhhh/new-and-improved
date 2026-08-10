@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Biography, research focus, and awards of Dr. Robert D. Hare, developer of the Psychopathy Checklist-Revised (PCL-R).">
   <title>About Dr. Robert Hare</title>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
@@ -16,11 +17,11 @@
         <nav class="navbar">
            <div class="nav-container">
              <span class="menu-title">ABOUT</span>
-              <div class="menu-toggle" id="mobile-menu">
+              <button class="menu-toggle" id="mobile-menu" aria-label="Toggle navigation menu" aria-expanded="false">
                  <span class="bar"></span>
                  <span class="bar"></span>
                  <span class="bar"></span>
-           </div>
+           </button>
          <ul class="nav-list">
            <li><a href="index.html" title="Explore Dr. Hare’s pioneering work in psychopathy.">HOME</a></li>
            <li><a href="about.html" title="Learn about Dr. Hare’s background and research focus." class="active">ABOUT</a></li>
@@ -33,22 +34,22 @@
         </div>
       </nav>
       <div class="tabs-container">
-          <div class="menu-toggle" id="tabs-mobile-menu">
+          <button class="menu-toggle" id="tabs-mobile-menu" aria-label="Toggle section menu" aria-expanded="false">
               <span class="bar"></span>
               <span class="bar"></span>
               <span class="bar"></span>
-          </div>
+          </button>
           <div class="tabs">
-            <div class="tab active" data-tab="biography">BIOGRAPHY</div>
-            <div class="tab" data-tab="research">RESEARCH FOCUS</div>
-            <div class="tab" data-tab="awards">AWARDS & RECOGNITION</div>
+            <button class="tab active" data-tab="biography">BIOGRAPHY</button>
+            <button class="tab" data-tab="research">RESEARCH FOCUS</button>
+            <button class="tab" data-tab="awards">AWARDS & RECOGNITION</button>
       </div>
     </div>
     </header>
     <main class="content">
         <div class="tab-content active" id="biography">
             <h2>Biography</h2>
-                  <img src="images/rdhare.png" alt="" style="float: left; margin-right: 15px; width: 60%;">
+                  <img src="images/rdhare.png" alt="Portrait of Dr. Robert D. Hare" style="float: left; margin-right: 15px; width: 60%;">
             <p><span class="highlight">Robert D. Hare, born in Calgary, Alberta</span>, is a pioneering psychologist whose work has fundamentally shaped the study of psychopathy. After completing his undergraduate studies, Hare pursued a Ph.D. in experimental psychology at the University of Western Ontario, where he began to explore the psychological underpinnings of criminal behavior. Early in his career, Hare worked as a psychologist at the British Columbia Penitentiary, where his observations and experiences with inmates catalyzed his lifelong dedication to understanding the personality structure and behaviors that characterize psychopathy.</p>
             <h3>Academic Career</h3>
             <p>Dr. Hare joined the faculty of the University of British Columbia, where he served as a professor of psychology and now holds the title of Emeritus Professor. His foundational research led to the development of the <span class="book">Psychopathy Checklist</span> (PCL) in 1980, which was later revised to the <span class="book">Psychopathy Checklist-Revised</span> (PCL-R) in 1991. This tool became the gold standard for psychopathy assessment, widely used in forensic and clinical settings around the world.</p>
@@ -116,7 +117,7 @@
                     <li>Silver Medal, Queen Sophia Center, Spain 1999</li>
                     <li>Canadian Psychological Association Distinguished Scientist Award for Applications of Psychology 2000</li>
                     <li>Festschrift in honor of Dr. Robert Hare, University of British Columbia, 2000</li>
-                    <li>Issac Ray Award, American Psychiatric Association/American Academy of Psychiatry and Law 2001 Award for Outstanding Contributions to Forensic Psychiatry and Psychiatric Jurisprudence 2001</li>
+                    <li>Isaac Ray Award, American Psychiatric Association/American Academy of Psychiatry and Law 2001 Award for Outstanding Contributions to Forensic Psychiatry and Psychiatric Jurisprudence 2001</li>
                     <li>American Academy of Forensic Psychology Award for Distinguished Contributions to Forensic Psychology 2001</li>
                     <li>B. Jaye Anno Award of Excellence in Communication, National Commission on Correctional Health Care 2003</li>
                     <li>First recipient of the R. D. Hare Lifetime Achievement Award*, Society for the Scientific Study of Psychopathy 2005</li>
@@ -167,6 +168,7 @@
             }
             // Toggle primary nav menu
             navList.classList.toggle('active');
+           mobileMenu.setAttribute('aria-expanded', navList.classList.contains('active'));
         });
 
         // Tabs menu toggle functionality
@@ -178,6 +180,7 @@
         // Toggle the tabs menu on hamburger menu click
         tabsMobileMenu.addEventListener('click', () => {
             tabsList.classList.toggle('active'); // Show or hide the tabs menu
+            tabsMobileMenu.setAttribute('aria-expanded', tabsList.classList.contains('active'));
         });
 
         // Handle tab selection
@@ -200,6 +203,18 @@
                 }
             });
         });
+
+        // If the page is opened with a #hash link, activate the tab containing it
+        if (location.hash) {
+            const hashTarget = document.getElementById(location.hash.slice(1));
+            const pane = hashTarget ? hashTarget.closest('.tab-content') : null;
+            if (pane) {
+                tabContents.forEach(content => content.classList.remove('active'));
+                pane.classList.add('active');
+                tabItems.forEach(item => item.classList.toggle('active', item.getAttribute('data-tab') === pane.id));
+                hashTarget.scrollIntoView();
+            }
+        }
     </script>
 <script>
 // Accordion functionality
@@ -227,7 +242,7 @@ accordionHeaders.forEach(header => {
   var sc_security="690ba1c2";
   </script>
 
-  <script src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c8.statcounter.com/counter.php?sc_project=1228587&amp;java=0&amp;security=690ba1c2&amp;invisible=1" alt="hit counter code"></a> </noscript>
+  <script src="https://www.statcounter.com/counter/counter.js"></script><noscript><a href="https://www.statcounter.com/" target="_blank"><img  src="https://c.statcounter.com/counter.php?sc_project=1228587&amp;java=0&amp;security=690ba1c2&amp;invisible=1" alt="hit counter code"></a> </noscript>
   <!-- End of StatCounter Code -->
 
 </body>
