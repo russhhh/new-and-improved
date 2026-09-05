@@ -6,12 +6,14 @@
   <meta name="description" content="Biography, research focus, and awards of Dr. Robert D. Hare, developer of the Psychopathy Checklist-Revised (PCL-R).">
   <title>About Dr. Robert Hare</title>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header>
         <div class="banner">
-            <img src="images/image1.jpg" alt="Ice overlay banner">
+            <img src="images/image1.jpg" alt="">
             <h1>Robert Hare | Psychopathy</h1>
         </div>
         <nav class="navbar">
@@ -39,15 +41,15 @@
               <span class="bar"></span>
               <span class="bar"></span>
           </button>
-          <div class="tabs">
-            <button class="tab active" data-tab="biography">BIOGRAPHY</button>
-            <button class="tab" data-tab="research">RESEARCH FOCUS</button>
-            <button class="tab" data-tab="awards">AWARDS & RECOGNITION</button>
+          <div class="tabs" role="tablist">
+            <button class="tab active" data-tab="biography" role="tab" id="tab-biography" aria-controls="biography" aria-selected="true">BIOGRAPHY</button>
+            <button class="tab" data-tab="research" role="tab" id="tab-research" aria-controls="research" aria-selected="false">RESEARCH FOCUS</button>
+            <button class="tab" data-tab="awards" role="tab" id="tab-awards" aria-controls="awards" aria-selected="false">AWARDS & RECOGNITION</button>
       </div>
     </div>
     </header>
-    <main class="content">
-        <div class="tab-content active" id="biography">
+    <main class="content" id="main-content" tabindex="-1">
+        <div class="tab-content active" id="biography" role="tabpanel" aria-labelledby="tab-biography" tabindex="0">
             <h2>Biography</h2>
                   <img src="images/rdhare.png" alt="Portrait of Dr. Robert D. Hare" style="float: left; margin-right: 15px; width: 60%;">
             <p><span class="highlight">Robert D. Hare, born in Calgary, Alberta</span>, is a pioneering psychologist whose work has fundamentally shaped the study of psychopathy. After completing his undergraduate studies, Hare pursued a Ph.D. in experimental psychology at the University of Western Ontario, where he began to explore the psychological underpinnings of criminal behavior. Early in his career, Hare worked as a psychologist at the British Columbia Penitentiary, where his observations and experiences with inmates catalyzed his lifelong dedication to understanding the personality structure and behaviors that characterize psychopathy.</p>
@@ -60,7 +62,7 @@
             <p>Outside of academia, Dr. Robert D. Hare has served as a prominent consultant to numerous law enforcement agencies, correctional facilities, and legal organizations worldwide. His expertise in psychopathy has informed risk assessment protocols and intervention strategies used in criminal justice systems across North America and Europe. Hare has worked closely with agencies such as the <span style="font-weight: 900;">Federal Bureau of Investigation (FBI)</span> and the <span style="font-weight: 900;">Royal Canadian Mounted Police (RCMP)</span>, helping to train officers and forensic experts in recognizing and managing individuals with psychopathic traits. Additionally, his input has been sought in high-stakes cases involving violent offenders, where understanding psychopathic tendencies can be crucial for profiling, interrogation, and sentencing decisions. Hare’s collaborations with correctional institutions have influenced approaches to inmate management and rehabilitation, ensuring that his insights extend beyond research settings to impact practical, real-world applications​​​.</p>
             <p>These works not only underscore Hare's influence within academia but have also brought psychopathy awareness to a global audience, equipping readers with insights to recognize and respond to psychopathic behaviors in various settings.</p>
         </div>
-        <div class="tab-content" id="research" style="margin: auto;">
+        <div class="tab-content" id="research" role="tabpanel" aria-labelledby="tab-research" tabindex="0" style="margin: auto;">
             <h2>Research Focus</h2>
             <p>Dr. Robert Hare has dedicated his career to the study of psychopathy, contributing significantly to both the foundational understanding of the condition and its practical implications within criminal justice systems worldwide. His work can be divided into two core areas: <span class="highlight">basic research</span> and <span class="highlight">applied research</span>.</p>
             <h3>Basic Research</h3>
@@ -82,7 +84,7 @@
             </ul>
             <p>Dr. Robert Hare's expertise spans both the theoretical foundations of psychopathy and its practical applications. His work has transformed how psychopathy is understood, assessed, and managed, influencing fields as diverse as criminal justice, mental health, and corporate governance. His legacy lies in bridging the gap between basic scientific inquiry and real-world application, ensuring that knowledge of psychopathy contributes to safer communities and better-informed professionals.</p>
         </div>
-        <div class="tab-content" id="awards" style="margin: auto;">
+        <div class="tab-content" id="awards" role="tabpanel" aria-labelledby="tab-awards" tabindex="0" style="margin: auto;">
             <h2>Awards & Recognition</h2>
             <p>In the realm of psychopathy and forensic psychology, few figures have achieved the international acclaim awarded to Dr. Robert D. Hare. His foundational work on the Psychopathy Checklist-Revised (PCL-R) has not only transformed clinical and forensic approaches to psychopathy but has garnered prestigious recognition across the globe. In 2010, Dr. Hare was appointed as a Member of the <span class="highlight">Order of Canada</span>, a recognition given to only the most distinguished citizens for their contributions to the nation and beyond​. His efforts also reached European shores, where he received the <span class="highlight">Silver Medal from Queen Sophia Center in Spain</span> in 1999, recognizing his profound contributions to psychology and forensic assessment​.</p>
             <p>Further celebrating his scientific advancements, Dr. Hare was honored with the <span class="highlight">Canadian Psychological Association's Distinguished Scientist Award</span> in 2000 for the applications of psychology in real-world settings​. This was followed by the <span class="highlight">Isaac Ray Award</span> from the American Psychiatric Association and the American Academy of Psychiatry and the Law in 2001, underscoring his monumental influence on forensic psychiatry and psychiatric jurisprudence​.</p>
@@ -94,10 +96,10 @@
             <p>Across these many accolades, Dr. Hare’s work continues to influence both the academic study of psychopathy and practical applications in criminal justice, forensic psychology, and beyond. His work is not only a testament to his scientific prowess but also to his enduring commitment to addressing the social challenges posed by psychopathic behavior.</p>
             <hr>
             <div class="accordion">
-                <div class="accordion-header">
-                  <h2>List of Awards</h2>
-                </div>
-                <div class="accordion-content" style="display: none;">
+                <h3 class="accordion-header">
+                  <button type="button" aria-expanded="false" aria-controls="awards-list">List of Awards</button>
+                </h3>
+                <div class="accordion-content" id="awards-list" hidden>
                   <h4>HARE, Robert D., C.M., Ph.D.</h4>
                   <ul>
                     <li>Experimental and forensic psychologist, educator; consultant</li>
@@ -154,7 +156,7 @@
     </main>
     <footer class="footer">
         <img src="images/hare-logo.jpg" alt="Hare Logo">
-        <p>&copy; Copyright Robert Hare 2025</p>
+        <p>&copy; Copyright Robert Hare 2026</p>
     </footer>
     <script>
         // Primary navigation functionality
@@ -187,8 +189,9 @@
         tabItems.forEach(tab => {
             tab.addEventListener('click', () => {
                 // Update active tab
-                tabItems.forEach(item => item.classList.remove('active'));
+                tabItems.forEach(item => { item.classList.remove('active'); item.setAttribute('aria-selected', 'false'); });
                 tab.classList.add('active');
+                tab.setAttribute('aria-selected', 'true');
 
                 // Update active content
                 tabContents.forEach(content => content.classList.remove('active'));
@@ -204,6 +207,19 @@
             });
         });
 
+
+        // Arrow-key navigation between tabs (WAI-ARIA tabs pattern)
+        tabsList.addEventListener('keydown', (event) => {
+            const tabs = Array.from(tabItems);
+            const index = tabs.indexOf(document.activeElement);
+            if (index === -1) return;
+            let next = null;
+            if (event.key === 'ArrowRight' || event.key === 'ArrowDown') next = (index + 1) % tabs.length;
+            else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') next = (index - 1 + tabs.length) % tabs.length;
+            else if (event.key === 'Home') next = 0;
+            else if (event.key === 'End') next = tabs.length - 1;
+            if (next !== null) { event.preventDefault(); tabs[next].focus(); tabs[next].click(); }
+        });
         // If the page is opened with a #hash link, activate the tab containing it
         if (location.hash) {
             const hashTarget = document.getElementById(location.hash.slice(1));
@@ -211,7 +227,7 @@
             if (pane) {
                 tabContents.forEach(content => content.classList.remove('active'));
                 pane.classList.add('active');
-                tabItems.forEach(item => item.classList.toggle('active', item.getAttribute('data-tab') === pane.id));
+                tabItems.forEach(item => { const on = item.getAttribute('data-tab') === pane.id; item.classList.toggle('active', on); item.setAttribute('aria-selected', on); });
                 hashTarget.scrollIntoView();
             }
         }
@@ -220,16 +236,17 @@
 // Accordion functionality
 const accordionHeaders = document.querySelectorAll('.accordion-header');
 accordionHeaders.forEach(header => {
-    header.addEventListener('click', (event) => {
+    const button = header.querySelector('button') || header;
+    button.addEventListener('click', (event) => {
         event.stopPropagation(); // Prevents interference with other click events
         const content = header.nextElementSibling;
-
-        // Toggle accordion content visibility
-        if (content.style.display === 'block') {
-            content.style.display = 'none';
+        const opening = content.hasAttribute('hidden');
+        if (opening) {
+            content.removeAttribute('hidden');
         } else {
-            content.style.display = 'block';
+            content.setAttribute('hidden', '');
         }
+        button.setAttribute('aria-expanded', opening);
     });
 });
 
@@ -242,7 +259,7 @@ accordionHeaders.forEach(header => {
   var sc_security="690ba1c2";
   </script>
 
-  <script src="https://www.statcounter.com/counter/counter.js"></script><noscript><a href="https://www.statcounter.com/" target="_blank"><img  src="https://c.statcounter.com/counter.php?sc_project=1228587&amp;java=0&amp;security=690ba1c2&amp;invisible=1" alt="hit counter code"></a> </noscript>
+  <script src="https://www.statcounter.com/counter/counter.js"></script><noscript><a href="https://www.statcounter.com/" target="_blank"><img  src="https://c.statcounter.com/counter.php?sc_project=1228587&amp;java=0&amp;security=690ba1c2&amp;invisible=1" alt="hit counter code"><span class="sr-only"> (opens in a new tab)</span></a> </noscript>
   <!-- End of StatCounter Code -->
 
 </body>

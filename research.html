@@ -6,12 +6,14 @@
   <meta name="description" content="Studies and essays on psychopathy research, from its history to its role in criminal justice and mental health.">
   <title>Dr. Hare's Psychopathy Research</title>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header>
         <div class="banner">
-            <img src="images/image1.jpg" alt="Ice overlay banner">
+            <img src="images/image1.jpg" alt="">
             <h1>Robert Hare | Psychopathy</h1>
         </div>
         <nav class="navbar">
@@ -39,24 +41,43 @@
               <span class="bar"></span>
               <span class="bar"></span>
           </button>
-          <div class="tabs">
-            <button class="tab active" data-tab="studies">STUDIES</button>
-            <button class="tab" data-tab="psychopathy">PSYCHOPATHY</button>
-            <button class="tab" data-tab="criminal-psychology">CRIMINAL PSYCHOLOGY</button>
-            <button class="tab" data-tab="mental-health">MENTAL HEALTH</button>
+          <div class="tabs" role="tablist">
+            <button class="tab active" data-tab="studies" role="tab" id="tab-studies" aria-controls="studies" aria-selected="true">STUDIES</button>
+            <button class="tab" data-tab="psychopathy" role="tab" id="tab-psychopathy" aria-controls="psychopathy" aria-selected="false">PSYCHOPATHY</button>
+            <button class="tab" data-tab="criminal-psychology" role="tab" id="tab-criminal-psychology" aria-controls="criminal-psychology" aria-selected="false">CRIMINAL PSYCHOLOGY</button>
+            <button class="tab" data-tab="mental-health" role="tab" id="tab-mental-health" aria-controls="mental-health" aria-selected="false">MENTAL HEALTH</button>
       </div>
     </div>
     </header>
-    <main class="content">
-        <div class="tab-content active" id="studies">
+    <main class="content" id="main-content" tabindex="-1">
+        <div class="tab-content active" id="studies" role="tabpanel" aria-labelledby="tab-studies" tabindex="0">
             <h2>Studies</h2>
+            <article id="jingle-jangle">
+              <h3>The Jingle/Jangle Fallacy</h3>
+              <p class="hare"><em>Some important methodological issues in the assessment of psychopathy</em></p>
+              <p class="byline">by Robert Hare · August 2026</p>
+              <p class="hare">Here, I briefly discuss several overarching issues concerning the assessment of psychopathy and the complexities of making sense of the voluminous literature on the topic. More complete details and discussions are available in links to PDFs and websites.</p>
+              <p class="hare">In spite of the impressive armamentarium of <a href="legacy.html#analytic-tools">analytic tools</a> now available, investigators have a problem, one common to much of science but especially to the behavioral and social sciences. That is, numerous studies and analyses are of questionable quality, many are one-off and often unreplicated, and too many have dubious relevance to the <a href="pcl-r.html#construct">traditional clinical construct of psychopathy</a>. The latter is of particular concern for me and for delineating the nature of psychopathy. Almost four decades ago, I demonstrated that extant measures of "psychopathy" did not measure the same construct, a problem often referred to as the <em>jingle fallacy</em> (same term, different constructs) (<a href="https://doi.org/10.1037/0022-006X.53.1.7" target="_blank" rel="noopener">Hare, 1985, <cite>Journal of Consulting and Clinical Psychology</cite>, 53(1)<span class="sr-only"> (opens in a new tab)</span></a>)<!-- TODO: link to PDF once supplied (documents/) -->. As I wrote at the time, <q>Agreement between these two measurement domains (clinical-behavioral, self-report) was, with a few modest exceptions, rather poor</q> (Hare, 1985, p. 15), and <q>considerable caution should be exercised when comparisons are made among studies in which different assessment procedures were used. At the very least, each investigator should provide evidence on the reliability and validity of the particular assessment procedure used and its relationship to other commonly used procedures</q> (Hare, 1985)<!-- TODO: page number missing in draft -->.</p>
+              <p class="hare">In referring to this fallacy, along with the <em>jangle fallacy</em> (different terms, same construct), Larsen and Bong stated,</p>
+              <blockquote>
+                <p class="hare">The problem of detecting whether two behavioral constructs reference the same real-world phenomenon has existed for over 100 years. Discordant naming of constructs is here termed the <em>construct identity fallacy</em> [italics added].</p>
+                <p class="attribution">— Larsen &amp; Bong (2016), <a href="https://doi.org/10.25300/MISQ/2016/40.3.01" target="_blank" rel="noopener"><cite>A tool for addressing construct identity in literature reviews and meta-analyses</cite>, <cite>MIS Quarterly</cite>, 40(3), 529–551<span class="sr-only"> (opens in a new tab)</span></a> (<a href="documents/Larsen%20&amp;%20Bong%202016%20-%20A%20Tool%20for%20Addressing%20Construct%20Identity.pdf">PDF, 45 pages</a>)</p>
+              </blockquote>
+              <p class="hare">According to these authors, misnaming constructs can result in confusion, conceptual messes in research, a waste of scientific time, and difficulty in <em>theory unification and knowledge cumulation</em>. The jingle fallacy is particularly problematic when investigators and commentators uncritically view <em>construct rating</em> scales (e.g., the PCL-R family) and <em>self-report</em> inventories as measures of the same construct. As I wrote elsewhere (Hare, 2022, <a href="documents/Hare%202022%20Foreword%20-%20Psychopathy%20and%20Criminal%20Behavior.pdf">Foreword (PDF, 7 pages)</a>, in Marques, Paulino &amp; Alho (Eds.), <cite class="book">Psychopathy and Criminal Behavior</cite>, Academic Press),</p>
+              <blockquote>
+                <p class="hare">I fear that my early concerns about the construct identity fallacy are re-emerging. Part of the problem is the increasing use of self-reports…The pool of items used in these scales is limited and scale redundancy is inevitable, with correlations among them being moderate to high. Moreover, there may be a growing trend toward the development of two (potentially diverging) lines of theory and research: one based on construct rating scales tied to clinical tradition and the other on self-reports derived from general personality theory. This is not a problem if researchers use multiple measures of psychopathy and can integrate the results in meaningful ways. Theory and research derived from construct rating and self-report tools certainly can have a symbiotic, enabling relationship, with one providing insights and hypotheses to the other. However, the correlations between self-reports and construct rating scales are small to moderate, at best. This is not surprising, for those skilled at impression management and deception are unlikely to respond to scale items in a manner that accurately reflects who they are (Gillard &amp; Rogers, 2015; Harris, Rice, &amp; Cormier, 2013). Most researchers and practitioners no doubt are cognizant of the strengths and limitations of each type of assessment. Still, my reading of the literature suggests that some authors and commentators take it for granted that theory and evidence from self-reports and construct ratings are in part interchangeable. Their assumption may be valid, but we should use caution when using such reciprocal extrapolations of theory and data to understand what we presume is a common construct. Problems arise if different assessment methods lead to different and conceptually incompatible results. In any case, it would be helpful for authors and commentators to be precise about their working definition of psychopathy, and for editors and reviewers to insist that they do so.</p>
+                <p class="attribution">— Hare (2022), Foreword to Marques, Paulino &amp; Alho (Eds.), <cite class="book">Psychopathy and Criminal Behavior</cite>, Academic Press, pp. xxix–xxxv</p>
+              </blockquote>
+              <p class="hare">Compounding the problem, at least in my view, is the uncertain connection between various measures and the traditional clinical construct of psychopathy, as exemplified by Cleckley's (1941, 1976) writings and other influential early clinicians (see <a href="pcl-r.html#construct">Psychopathy 101: Conceptual Framework</a>).</p>
+            </article>
+
             <h3 id="one-percent">How Do We Know It's 1%?</h3>
             <p>You might ask, how does one arrive at the figure of <strong>1%</strong> for psychopathy in the general population? Surely Dr. Hare didn’t sit down with a checklist and interview tens of thousands of people at random.</p>
             <p>Instead, Hare’s research began in a more concentrated environment: prisons. There, his famous tool, the <span class="highlight">Psychopathy Checklist-Revised (PCL-R)</span>, revealed a striking pattern. Roughly <strong>75%</strong> of inmates met the criteria for antisocial personality disorder (ASPD), a broader condition marked by disregard for the rights of others. Yet only <strong>15-25%</strong> of these prisoners were classified as psychopaths, meaning they scored above 30 on the PCL-R scale. In simpler terms, not all individuals with ASPD are psychopaths, but all psychopaths display certain traits of ASPD.</p>
             <p>Here’s where the math gets interesting. In the general population, existing research estimates that <strong>3-5%</strong> of people have ASPD. If the same ratio of ASPD to psychopathy holds true outside of prisons as it does within them, then about <strong>1%</strong> of the general population could be classified as psychopathic.</p>
             <p>It’s a statistical leap, but a reasonable one. Think of it as studying lions at a watering hole to make educated guesses about their presence across the savanna. By analyzing the high-density environment of prisons, Hare extrapolated to the broader human population.</p>
         </div>
-        <div class="tab-content" id="psychopathy">
+        <div class="tab-content" id="psychopathy" role="tabpanel" aria-labelledby="tab-psychopathy" tabindex="0">
           <article>
             <h2>A History of Psychopathy Research</h2>
             <h3>The Long Shadow of the Psychopath</h3>
@@ -95,7 +116,7 @@
               <p>The story of psychopathy isn’t just science—it’s a centuries-long quest to understand the complex and often chilling depths of the human soul. And that story is far from over.</p>
             </article>
          </div>
-        <div class="tab-content" id="criminal-psychology" style="margin: auto;">
+        <div class="tab-content" id="criminal-psychology" role="tabpanel" aria-labelledby="tab-criminal-psychology" tabindex="0" style="margin: auto;">
             <h2>The Intersection of Psychopathy Research & Criminal Justice</h2>
             <article class="article-block">
               <h3>Recidivism and the PCL-R: Predicting Risk and Informing Decisions</h3>
@@ -143,7 +164,7 @@
               <p>The PCL-R is a powerful tool, but it is not infallible. Its integration into criminal justice systems demands rigorous training, ethical oversight, and continuous refinement. By understanding its strengths and limitations, professionals can use the PCL-R to balance justice with compassion, ensuring that decisions are both informed and fair. These articles aim to provide legal practitioners, mental health experts, and policymakers with the insights needed to navigate the complexities of psychopathy in the pursuit of justice.</p>
             </article>
         </div>
-        <div class="tab-content" id="mental-health" style="margin: auto;">
+        <div class="tab-content" id="mental-health" role="tabpanel" aria-labelledby="tab-mental-health" tabindex="0" style="margin: auto;">
             <h2>The Intersection of Psychopathy Research & Mental Health</h2>
               <article class="article-block">
                 <h3>Psychopathy in Mental Health: The Role of the PCL-R in Diagnosis and Treatment</h3>
@@ -209,7 +230,7 @@
     </main>
     <footer class="footer">
         <img src="images/hare-logo.jpg" alt="Hare Logo">
-        <p>&copy; Copyright Robert Hare 2025</p>
+        <p>&copy; Copyright Robert Hare 2026</p>
     </footer>
     <script>
         // Primary navigation functionality
@@ -242,8 +263,9 @@
         tabItems.forEach(tab => {
             tab.addEventListener('click', () => {
                 // Update active tab
-                tabItems.forEach(item => item.classList.remove('active'));
+                tabItems.forEach(item => { item.classList.remove('active'); item.setAttribute('aria-selected', 'false'); });
                 tab.classList.add('active');
+                tab.setAttribute('aria-selected', 'true');
 
                 // Update active content
                 tabContents.forEach(content => content.classList.remove('active'));
@@ -259,6 +281,19 @@
             });
         });
 
+
+        // Arrow-key navigation between tabs (WAI-ARIA tabs pattern)
+        tabsList.addEventListener('keydown', (event) => {
+            const tabs = Array.from(tabItems);
+            const index = tabs.indexOf(document.activeElement);
+            if (index === -1) return;
+            let next = null;
+            if (event.key === 'ArrowRight' || event.key === 'ArrowDown') next = (index + 1) % tabs.length;
+            else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') next = (index - 1 + tabs.length) % tabs.length;
+            else if (event.key === 'Home') next = 0;
+            else if (event.key === 'End') next = tabs.length - 1;
+            if (next !== null) { event.preventDefault(); tabs[next].focus(); tabs[next].click(); }
+        });
         // If the page is opened with a #hash link, activate the tab containing it
         if (location.hash) {
             const hashTarget = document.getElementById(location.hash.slice(1));
@@ -266,21 +301,25 @@
             if (pane) {
                 tabContents.forEach(content => content.classList.remove('active'));
                 pane.classList.add('active');
-                tabItems.forEach(item => item.classList.toggle('active', item.getAttribute('data-tab') === pane.id));
+                tabItems.forEach(item => { const on = item.getAttribute('data-tab') === pane.id; item.classList.toggle('active', on); item.setAttribute('aria-selected', on); });
                 hashTarget.scrollIntoView();
             }
         }
     </script>
     <script>
     document.querySelectorAll('.toggle-button').forEach(button => {
-      button.addEventListener('click', function () {
-      const articleBlock = this.parentElement;
-      articleBlock.classList.toggle('expanded');
-      this.textContent = articleBlock.classList.contains('expanded') ? 'Read Less' : 'Read More';
-      this.setAttribute('aria-expanded', articleBlock.classList.contains('expanded'));
-  });
-
-});
+            const articleBlock = button.parentElement;
+            const setState = (expanded) => {
+                articleBlock.classList.toggle('expanded', expanded);
+                button.textContent = expanded ? 'Read Less' : 'Read More';
+                button.setAttribute('aria-expanded', expanded);
+            };
+            button.addEventListener('click', () => setState(!articleBlock.classList.contains('expanded')));
+            // If keyboard focus lands on something hidden inside a collapsed article, expand it
+            articleBlock.addEventListener('focusin', (event) => {
+                if (event.target !== button && !articleBlock.classList.contains('expanded')) setState(true);
+            });
+        });
     </script>
 
   <!-- Start of StatCounter Code -->
@@ -291,7 +330,7 @@
   var sc_security="690ba1c2";
   </script>
 
-  <script src="https://www.statcounter.com/counter/counter.js"></script><noscript><a href="https://www.statcounter.com/" target="_blank"><img  src="https://c.statcounter.com/counter.php?sc_project=1228587&amp;java=0&amp;security=690ba1c2&amp;invisible=1" alt="hit counter code"></a> </noscript>
+  <script src="https://www.statcounter.com/counter/counter.js"></script><noscript><a href="https://www.statcounter.com/" target="_blank"><img  src="https://c.statcounter.com/counter.php?sc_project=1228587&amp;java=0&amp;security=690ba1c2&amp;invisible=1" alt="hit counter code"><span class="sr-only"> (opens in a new tab)</span></a> </noscript>
   <!-- End of StatCounter Code -->
 
 </body>

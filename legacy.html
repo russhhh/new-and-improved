@@ -11,9 +11,10 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header>
         <div class="banner">
-            <img src="images/image1.jpg" alt="Ice overlay banner">
+            <img src="images/image1.jpg" alt="">
             <h1>Robert Hare | Psychopathy</h1>
         </div>
         <nav class="navbar">
@@ -41,35 +42,36 @@
               <span class="bar"></span>
               <span class="bar"></span>
           </button>
-          <div class="tabs">
-              <button class="tab active" data-tab="early-inspirations" title="Early Inspirations">INSPIRATIONS</button>
-              <button class="tab" data-tab="key-discoveries" title="Key Discoveries">DISCOVERIES</button>
-              <button class="tab" data-tab="impact-of-the-pcl-r" title="Impact of the PCL-R">IMPACT</button>
-              <button class="tab" data-tab="memoirs-from-the-field" title="Memoirs from the Field">MEMOIRS</button>
-              <button class="tab" data-tab="evolution-of-psychopathy-research" title="Evolution of Psychopathy Research">EVOLUTION</button>
-              <button class="tab" data-tab="advice-to-future-researchers" title="Advice to Future Researchers">ADVICE</button>
-              <button class="tab" data-tab="personal-reflections" title="Personal Reflections">REFLECTIONS</button>
+          <div class="tabs" role="tablist">
+              <button class="tab active" data-tab="early-inspirations" role="tab" id="tab-early-inspirations" aria-controls="early-inspirations" aria-selected="true" title="Early Inspirations">INSPIRATIONS</button>
+              <button class="tab" data-tab="key-discoveries" role="tab" id="tab-key-discoveries" aria-controls="key-discoveries" aria-selected="false" title="Key Discoveries">DISCOVERIES</button>
+              <button class="tab" data-tab="impact-of-the-pcl-r" role="tab" id="tab-impact-of-the-pcl-r" aria-controls="impact-of-the-pcl-r" aria-selected="false" title="Impact of the PCL-R">IMPACT</button>
+              <button class="tab" data-tab="memoirs-from-the-field" role="tab" id="tab-memoirs-from-the-field" aria-controls="memoirs-from-the-field" aria-selected="false" title="Memoirs from the Field">MEMOIRS</button>
+              <button class="tab" data-tab="evolution-of-psychopathy-research" role="tab" id="tab-evolution-of-psychopathy-research" aria-controls="evolution-of-psychopathy-research" aria-selected="false" title="Evolution of Psychopathy Research">EVOLUTION</button>
+              <button class="tab" data-tab="advice-to-future-researchers" role="tab" id="tab-advice-to-future-researchers" aria-controls="advice-to-future-researchers" aria-selected="false" title="Advice to Future Researchers">ADVICE</button>
+              <button class="tab" data-tab="personal-reflections" role="tab" id="tab-personal-reflections" aria-controls="personal-reflections" aria-selected="false" title="Personal Reflections">REFLECTIONS</button>
 
-              <button class="tab" data-tab="legacy" title="Legacy">LEGACY</button>
+              <button class="tab" data-tab="legacy" role="tab" id="tab-legacy" aria-controls="legacy" aria-selected="false" title="Legacy">LEGACY</button>
           </div>
       </div>
 
     </header>
-    <main class="content">
-        <div class="tab-content active" id="early-inspirations">
+    <main class="content" id="main-content" tabindex="-1">
+        <div class="tab-content active" id="early-inspirations" role="tabpanel" aria-labelledby="tab-early-inspirations" tabindex="0">
             <h2>Early Inspirations</h2>
-            <p class="light"><span class="highlight">Coming in 2025</span>: Stories or reflections on what first drew Dr. Hare to the field of psychology and psychopathy, key mentors, and early career challenges or breakthroughs.</p>
+            <p class="placeholder">In preparation: Stories or reflections on what first drew Dr. Hare to the field of psychology and psychopathy, key mentors, and early career challenges or breakthroughs.</p>
 
         </div>
-        <div class="tab-content" id="key-discoveries">
+        <div class="tab-content" id="key-discoveries" role="tabpanel" aria-labelledby="tab-key-discoveries" tabindex="0">
             <h2>Key Discoveries</h2>
-            <p class="light"><span class="highlight">Coming in 2025</span>: Detailed reflections on his most significant findings, particularly the development of the PCL-R, and the impact these discoveries had on the field. This may include both scientific and personal insights about the importance of these milestones.</p>
+            <p class="placeholder">In preparation: Detailed reflections on his most significant findings, particularly the development of the PCL-R, and the impact these discoveries had on the field. This may include both scientific and personal insights about the importance of these milestones.</p>
         </div>
-        <div class="tab-content" id="impact-of-the-pcl-r">
+        <div class="tab-content" id="impact-of-the-pcl-r" role="tabpanel" aria-labelledby="tab-impact-of-the-pcl-r" tabindex="0">
             <h2>Impact of the PCL-R</h2>
             <p class="light">Anecdotes and reflections on how the PCL-R has been used and its role in psychology and criminal justice, with personal stories that reveal his thoughts on its influence, limitations, and real-world applications.</p>
             <article class="article-block">
               <h3>Some Comments on Qualifications for the Forensic Use of the Hare PCL-R</h3>
+              <p class="byline">by Robert Hare · August 22, 2000</p>
                <p class="hare">In a recent civil commitment hearing in the United States the District Attorney's Office decided not to introduce a psychologist's testimony concerning her PCL-R assessment, because of the belief that she was not qualified to use the instrument. The grounds for this belief are not clear, but apparently included some concerns raised by the Public Defender's Office about the adequacy of the psychologist's training in the use of the PCL-R. The implication seemed to be that in order for clinicians to be qualified to use the PCL-R they must have participated in the training program offered by my organization, Darkstone Research Group.</p>
                 <p class="hare">This particular case is similar to many others in which I am asked to evaluate a clinician's qualifications and competence with respect to the PCL-R assessment of psychopathy. However, in all but the most egregious cases I would be on shaky grounds if I did so. I have no professional or legal authority to determine who can and cannot use the PCL-R, or to provide judgments about the adequacy of specific clinicians and their assessments. In North America the education, professional training, and clinical/forensic experience required to purchase and use psychological instruments, including the PCL-R and its derivatives, the Psychopathy Checklist: Screening Version (PCL: SV) and the Psychopathy Checklist: Youth Version (PCL: YV), are determined by the test publishers, professional standards (e.g., the American Psychological Association's Standards for Educational and Psychological Testing), and by state (U.S.A.) or provincial (Canada) licensing or regulatory boards. As long as clinicians meet relevant professional and regulatory standards, have sufficient forensic experience, are legally permitted to conduct psychological assessments, and are familiar with the clinical and research literature on psychopathy, they would meet the technical requirements for use of the PCL-R.</p>
                 <p class="hare">Beyond this, it is the responsibility of clinicians to do what they can to ensure that they have the appropriate level of training and experience for the purpose at hand, and that they adhere to the appropriate professional and ethical guidelines and standards. They also should be familiar with the relevant research literature and be prepared to have their assessments subjected to scrutiny and examination. Many clinicians feel more comfortable if they have received or been exposed to specialized training in the use of a particular instrument. This may be especially true with respect to the PCL-R. As indicated in the PCL-R Manual, such training can be provided within institutions by individuals who are themselves experienced in the administration, scoring, and interpretation of the PCL-R. The Manual also recommends that a clinician should complete five to ten practice assessments and achieve an acceptable level of interrater reliability before using the PCL-R for forensic purposes. Some institutions have set their own standards for in-house PCL-R training, and most of the clinicians who participate in this training should have little difficulty in conducting reliable PCL-R assessments.</p>
@@ -80,39 +82,60 @@
                 <p class="hare">Campbell, T.W. (2000). Sexual predator evaluations and phrenology: Considering issues of evidentiary reliability. Behavioral Sciences and the Law, 18, 111-130.</p>
                 <p class="hare">Hare, R.D. (1998). The Hare PCL-R: Some issues concerning its use and misuse. Legal and Criminological Psychology, 3, 99-119.</p>
                 <p class="hare">Robert D. Hare, Ph.D.<br>August 22, 2000 </p>
-              <button class="toggle-button">Read More</button>
+                <p class="editor-note">Editor's note (2026): Darkstone Research Group's assets were acquired by Multi-Health Systems in 2019 and DRG was dissolved in 2023. For current information on PCL-R permissions and training, see <a href="pcl-r.html#copyright-permissions">The PCL-R: Copyright, Permissions, and Training</a>.</p>
+              <button class="toggle-button" aria-expanded="false">Read More</button>
             </article>        </div>
-        <div class="tab-content" id="memoirs-from-the-field" style="margin: auto;">
+        <div class="tab-content" id="memoirs-from-the-field" role="tabpanel" aria-labelledby="tab-memoirs-from-the-field" tabindex="0" style="margin: auto;">
             <h2>Memoirs from the Field</h2>
-            <p class="light"><span class="highlight">Coming in 2025</span>: Personal stories or memorable experiences from Dr. Hare’s interactions with patients, professionals, and possibly even criminals. These may provide a more personal look at the realities and ethical questions in his work.</p>
+            <p class="placeholder">In preparation: Personal stories or memorable experiences from Dr. Hare’s interactions with patients, professionals, and possibly even criminals. These may provide a more personal look at the realities and ethical questions in his work.</p>
               <article class="article-block">
                 <h3>Letter from King County Prosecutor | Seattle</h3>
-                <object data="documents/Baird%20Seattle%201998%20Letter.pdf" type="application/pdf" width="100%" height="600px">
-                  <p>Your browser does not support PDFs. <a href="documents/Baird%20Seattle%201998%20Letter.pdf">Download the PDF</a>.</p>
+                <object data="documents/Baird%20Seattle%201998%20Letter.pdf" type="application/pdf" width="100%" height="600px" aria-label="Scanned letter from the King County Prosecutor, Seattle, 1998">
+                  <p>Your browser does not support PDFs. <a href="documents/Baird%20Seattle%201998%20Letter.pdf">Download the letter from the King County Prosecutor (PDF)</a>.</p>
                 </object>
-                <button class="toggle-button">Read More</button>
+                <details>
+                  <summary>Text transcript of the letter</summary>
+                  <p class="placeholder">Transcript in preparation. (The PDF is a scanned image, so a text version is needed for screen-reader users.)</p>
+                </details>
+                <button class="toggle-button" aria-expanded="false">Read More</button>
               </article>
         </div>
-        <div class="tab-content" id="evolution-of-psychopathy-research" style="margin: auto;">
+        <div class="tab-content" id="evolution-of-psychopathy-research" role="tabpanel" aria-labelledby="tab-evolution-of-psychopathy-research" tabindex="0" style="margin: auto;">
             <h2>The Evolution of Psychopathy Research</h2>
-            <p class="light"><span class="highlight">Coming in 2025</span>: Reflections on how the field has changed over his career, his views on new research directions, and potential future developments. Dr. Hare may also discuss what he sees as the remaining challenges or unanswered questions in psychopathy research.</p>
+            <article id="then-and-now">
+              <h3>The Psychopathy Literature, Then and Now</h3>
+              <p class="byline">by Robert Hare · August 2026</p>
+
+              <h4>Then</h4>
+              <p class="hare">When I started my research career well over a half-century ago, less than 30 published articles per year used some sort of scale to assess for what ostensibly was psychopathy. The few early investigators were mostly psychologists, psychiatrists, and sociologists located in North America and several European countries, most with a psychoanalytic bent. I kept up with the meagre literature by walking through the library stacks (rows of bookshelves) and checking the contents of journals as they appeared. I wrote articles by hand or on a typewriter (three copies) and communicated with other investigators by land-line telephone or slow mail. Computers and the idea of an internet were science fiction.</p>
+              <p class="hare">I should note that, from the beginning, my research had a strong psychobiological flavour, influenced by the integration of learning, motivational, cognitive, and perceptual theory, and by the emergence of psychophysiology as a discipline. In fact, many of my publications over the next few decades were not on psychopathy but on the integration of cognitive, affective, and behavioural systems in normal populations. Compounding these technical issues was a lack of clarity or agreement about the nature of psychopathy and how best to measure it; not all researchers were on the same diagnostic page (<a href="https://doi.org/10.1037/0022-006X.53.1.7" target="_blank" rel="noopener">Hare, 1985, <cite>Journal of Consulting and Clinical Psychology</cite>, 53(1)<span class="sr-only"> (opens in a new tab)</span></a>). The problem is still with us, though more problematic than ever (see <a href="research.html#jingle-jangle">The Jingle/Jangle Fallacy</a>).</p>
+
+              <h4>Now</h4>
+              <p class="hare">In 2025, more than 500 theoretical, empirical, and applied articles on psychopathy were published by researchers and clinicians from a wide variety of disciplines and domains, including criminology, criminal justice, jurisprudence, general personality theory, neuroscience, biology, genetics, mathematics, physiology, and philosophy. Conceptual frameworks, methodologies, and statistical analyses, once discipline-specific and relatively uncomplicated and understandable, are now complex, detailed, and challenging, and routinely involve the blending of several different domains and disciplines. Crucially, the world-wide web provides ready access to the global literature on psychopathy, permits near instantaneous exchange of information, and greatly facilitates interdisciplinary theory and research.</p>
+              <p class="hare">The study of psychopathy is increasingly interdisciplinary. Significantly, some investigators have been able to integrate these diverse sources of input to increase our understanding of psychopathy. As Anderson et al. (2025, p. 423) put it in their discussion of psychopathy and violence, the boundaries of some domains <q>converge in meaningful ways…[M]any of the most robust and useful paradigms for understanding any complex topic tend toward [an] integrative framework, drawing on conclusions that arise independently in distinct disciplines, but which converge on coherent themes</q> (<a href="https://doi.org/10.1016/B978-0-323-95272-9.00019-X" target="_blank" rel="noopener">Anderson et al., 2025<span class="sr-only"> (opens in a new tab)</span></a>).</p>
+              <p class="hare">A milestone for the field was the incorporation of the <a href="https://psychopathysociety.org/" target="_blank" rel="noopener">Society for the Scientific Study of Psychopathy (SSSP)<span class="sr-only"> (opens in a new tab)</span></a>, for which I was a founding member in 2005.</p>
+
+              <h4 id="analytic-tools">Analytic Tools</h4>
+              <p class="hare">The sheer volume of theoretical and empirical research presents a challenge to those who aim to summarize and synthesise the literature on psychopathy and its narrower aspects, such as measurement, risk assessment, neuroscience, societal implications, and so forth. However, investigators have several methodological and statistical tools to facilitate their evaluation and understanding of the literature, including <a href="https://guides.library.utoronto.ca/c.php?g=713309&amp;p=5084626" target="_blank" rel="noopener">systematic reviews, scoping reviews, and meta-analyses<span class="sr-only"> (opens in a new tab)</span></a>. A recent addition to these <em>knowledge syntheses</em> is generative AI, defined as <q>a machine learning model that can generate new data [content] instead of making predictions</q> (<a href="https://doi.org/10.3390/educsci14020172" target="_blank" rel="noopener">Kalota, 2024<span class="sr-only"> (opens in a new tab)</span></a>). Interestingly, when I access an online article, I sometimes am asked (by whom?) if I would like to have an AI interpretation and summary.</p>
+              <p class="hare">We emphasize that the structure and contents of this website are intended to inform professionals and the public about the current state of psychopathy theory and research, not to provide advice or to use generative AI for clinical/forensic diagnosis, classification, risk assessment, release decision, or treatment evaluation of individuals (<a href="https://www.frontiersin.org/journals/psychiatry/articles/10.3389/fpsyt.2024.1346059/full" target="_blank" rel="noopener">see this discussion in <cite>Frontiers in Psychiatry</cite><span class="sr-only"> (opens in a new tab)</span></a>).</p>
+            </article>
         </div>
-        <div class="tab-content" id="advice-to-future-researchers" style="margin: auto;">
+        <div class="tab-content" id="advice-to-future-researchers" role="tabpanel" aria-labelledby="tab-advice-to-future-researchers" tabindex="0" style="margin: auto;">
             <h2>Advice to Future Researchers</h2>
-            <p class="light"><span class="highlight">Coming in 2025</span>: Words of wisdom for upcoming psychologists, criminologists, and researchers. This may include both practical advice and philosophical reflections on the ethical responsibilities of working in such a complex field.</p>
+            <p class="placeholder">In preparation: Words of wisdom for upcoming psychologists, criminologists, and researchers. This may include both practical advice and philosophical reflections on the ethical responsibilities of working in such a complex field.</p>
         </div>
-        <div class="tab-content" id="personal-reflections" style="margin: auto;">
+        <div class="tab-content" id="personal-reflections" role="tabpanel" aria-labelledby="tab-personal-reflections" tabindex="0" style="margin: auto;">
             <h2>Personal Reflections</h2>
-            <p class="light"><span class="highlight">Coming in 2025</span>: A space for Dr. Hare’s broader thoughts on human nature, psychology, or society. This could serve as a more open, flexible section where he shares his deeper personal insights on the themes he has explored throughout his career.</p>
+            <p class="placeholder">In preparation: A space for Dr. Hare’s broader thoughts on human nature, psychology, or society. This could serve as a more open, flexible section where he shares his deeper personal insights on the themes he has explored throughout his career.</p>
         </div>
-        <div class="tab-content" id="legacy" style="margin: auto;">
+        <div class="tab-content" id="legacy" role="tabpanel" aria-labelledby="tab-legacy" tabindex="0" style="margin: auto;">
             <h2>Legacy</h2>
-            <p class="light"><span class="highlight">Coming in 2025</span>: Closing reflections on his life's work, its lasting influence, and his hopes for how his research will be used and understood in the future.</p>
+            <p class="placeholder">In preparation: Closing reflections on his life's work, its lasting influence, and his hopes for how his research will be used and understood in the future.</p>
         </div>
     </main>
     <footer class="footer">
         <img src="images/hare-logo.jpg" alt="Hare Logo">
-        <p>&copy; Copyright Robert Hare 2025</p>
+        <p>&copy; Copyright Robert Hare 2026</p>
     </footer>
     <script>
         // Primary navigation functionality
@@ -145,8 +168,9 @@
         tabItems.forEach(tab => {
             tab.addEventListener('click', () => {
                 // Update active tab
-                tabItems.forEach(item => item.classList.remove('active'));
+                tabItems.forEach(item => { item.classList.remove('active'); item.setAttribute('aria-selected', 'false'); });
                 tab.classList.add('active');
+                tab.setAttribute('aria-selected', 'true');
 
                 // Update active content
                 tabContents.forEach(content => content.classList.remove('active'));
@@ -162,6 +186,19 @@
             });
         });
 
+
+        // Arrow-key navigation between tabs (WAI-ARIA tabs pattern)
+        tabsList.addEventListener('keydown', (event) => {
+            const tabs = Array.from(tabItems);
+            const index = tabs.indexOf(document.activeElement);
+            if (index === -1) return;
+            let next = null;
+            if (event.key === 'ArrowRight' || event.key === 'ArrowDown') next = (index + 1) % tabs.length;
+            else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') next = (index - 1 + tabs.length) % tabs.length;
+            else if (event.key === 'Home') next = 0;
+            else if (event.key === 'End') next = tabs.length - 1;
+            if (next !== null) { event.preventDefault(); tabs[next].focus(); tabs[next].click(); }
+        });
         // If the page is opened with a #hash link, activate the tab containing it
         if (location.hash) {
             const hashTarget = document.getElementById(location.hash.slice(1));
@@ -169,7 +206,7 @@
             if (pane) {
                 tabContents.forEach(content => content.classList.remove('active'));
                 pane.classList.add('active');
-                tabItems.forEach(item => item.classList.toggle('active', item.getAttribute('data-tab') === pane.id));
+                tabItems.forEach(item => { const on = item.getAttribute('data-tab') === pane.id; item.classList.toggle('active', on); item.setAttribute('aria-selected', on); });
                 hashTarget.scrollIntoView();
             }
         }
@@ -177,12 +214,18 @@
 
   <script>
   document.querySelectorAll('.toggle-button').forEach(button => {
-    button.addEventListener('click', function() {
-        const articleBlock = this.parentElement;
-        articleBlock.classList.toggle('expanded');
-        this.textContent = articleBlock.classList.contains('expanded') ? 'Read Less' : 'Read More';
-    });
-});
+            const articleBlock = button.parentElement;
+            const setState = (expanded) => {
+                articleBlock.classList.toggle('expanded', expanded);
+                button.textContent = expanded ? 'Read Less' : 'Read More';
+                button.setAttribute('aria-expanded', expanded);
+            };
+            button.addEventListener('click', () => setState(!articleBlock.classList.contains('expanded')));
+            // If keyboard focus lands on something hidden inside a collapsed article, expand it
+            articleBlock.addEventListener('focusin', (event) => {
+                if (event.target !== button && !articleBlock.classList.contains('expanded')) setState(true);
+            });
+        });
 </script>
 
   <!-- Start of StatCounter Code -->
@@ -193,7 +236,7 @@
   var sc_security="690ba1c2";
   </script>
 
-  <script src="https://www.statcounter.com/counter/counter.js"></script><noscript><a href="https://www.statcounter.com/" target="_blank"><img  src="https://c.statcounter.com/counter.php?sc_project=1228587&amp;java=0&amp;security=690ba1c2&amp;invisible=1" alt="hit counter code"></a> </noscript>
+  <script src="https://www.statcounter.com/counter/counter.js"></script><noscript><a href="https://www.statcounter.com/" target="_blank"><img  src="https://c.statcounter.com/counter.php?sc_project=1228587&amp;java=0&amp;security=690ba1c2&amp;invisible=1" alt="hit counter code"><span class="sr-only"> (opens in a new tab)</span></a> </noscript>
   <!-- End of StatCounter Code -->
 
 </body>

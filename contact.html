@@ -7,12 +7,14 @@
     <script src="https://kit.fontawesome.com/e3f8b9f90e.js" crossorigin="anonymous"></script>
     <title>Contact | Robert Hare</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header>
         <div class="banner">
-            <img src="images/image1.jpg" alt="Ice overlay banner">
+            <img src="images/image1.jpg" alt="">
             <h1>Robert Hare | Psychopathy</h1>
         </div>
         <nav class="navbar">
@@ -35,7 +37,7 @@
         </div>
     </nav>
     </header>
-    <main class="content">
+    <main class="content" id="main-content" tabindex="-1">
       <article>
       <h2>Contacting Us</h2>
       <p>Thank you for your interest in Dr. Robert Hare’s work. Please note the following before reaching out:</p>
@@ -55,10 +57,10 @@
       <p>If you have ideas for content you’d like to see on the website or general feedback, we encourage you to use the form below. Your input helps us improve the resources we provide.</p>
       <form action="submit-feedback.php" method="post">
     <label for="name">Your Name:</label>
-    <input type="text" id="name" name="name" placeholder="Enter your name" required style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 4px;">
+    <input type="text" id="name" name="name" autocomplete="name" placeholder="Enter your name" required style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 4px;">
 
     <label for="email">Your Email:</label>
-    <input type="email" id="email" name="email" placeholder="Enter your email" required style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 4px;">
+    <input type="email" id="email" name="email" autocomplete="email" placeholder="Enter your email" required style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 4px;">
 
     <label for="comments">Your Feedback:</label>
     <textarea id="comments" name="comments" rows="5" placeholder="Enter your feedback and suggestions here" required style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 4px;"></textarea>
@@ -69,7 +71,7 @@
     </main>
     <footer class="footer">
           <img src="images/hare-logo.jpg" alt="Hare Logo">
-          <p>&copy; Copyright Robert Hare 2025</p>
+          <p>&copy; Copyright Robert Hare 2026</p>
       </footer>
     <!-- JavaScript code -->
         <script>
@@ -81,12 +83,18 @@
            mobileMenu.setAttribute('aria-expanded', navList.classList.contains('active'));
         });
           document.querySelectorAll('.toggle-button').forEach(button => {
-          button.addEventListener('click', function() {
-              const articleBlock = this.parentElement;
-              articleBlock.classList.toggle('expanded');
-              this.textContent = articleBlock.classList.contains('expanded') ? 'Read Less' : 'Read More';
-          });
-      });
+            const articleBlock = button.parentElement;
+            const setState = (expanded) => {
+                articleBlock.classList.toggle('expanded', expanded);
+                button.textContent = expanded ? 'Read Less' : 'Read More';
+                button.setAttribute('aria-expanded', expanded);
+            };
+            button.addEventListener('click', () => setState(!articleBlock.classList.contains('expanded')));
+            // If keyboard focus lands on something hidden inside a collapsed article, expand it
+            articleBlock.addEventListener('focusin', (event) => {
+                if (event.target !== button && !articleBlock.classList.contains('expanded')) setState(true);
+            });
+        });
         </script>
         <!-- Start of StatCounter Code -->
         <script>
@@ -96,7 +104,7 @@
         var sc_security="690ba1c2";
         </script>
 
-        <script src="https://www.statcounter.com/counter/counter.js"></script><noscript><a href="https://www.statcounter.com/" target="_blank"><img  src="https://c.statcounter.com/counter.php?sc_project=1228587&amp;java=0&amp;security=690ba1c2&amp;invisible=1" alt="hit counter code"></a> </noscript>
+        <script src="https://www.statcounter.com/counter/counter.js"></script><noscript><a href="https://www.statcounter.com/" target="_blank"><img  src="https://c.statcounter.com/counter.php?sc_project=1228587&amp;java=0&amp;security=690ba1c2&amp;invisible=1" alt="hit counter code"><span class="sr-only"> (opens in a new tab)</span></a> </noscript>
         <!-- End of StatCounter Code -->
 
 </body>

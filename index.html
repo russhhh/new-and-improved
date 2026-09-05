@@ -12,9 +12,10 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header>
         <div class="banner">
-            <img src="images/image1.jpg" alt="Ice overlay banner">
+            <img src="images/image1.jpg" alt="">
             <h1>Robert Hare | Psychopathy</h1>
         </div>
         <nav class="navbar">
@@ -37,26 +38,29 @@
         </div>
     </nav>
     </header>
-    <main class="content">
+    <main class="content" id="main-content" tabindex="-1">
         <div class="news-carousel">
             <div class="news-item">
-                <h2><span style="color: #C11B17">News & Updates</span></h2>
-                <p><i class="fa-solid fa-flag fa-lg" style="color: #C11B17"></i>Jan. 1, 2025 – New website launched.</p>
+                <h2><span style="color: #C11B17">News &amp; Updates</span></h2>
+                <p><i class="fa-solid fa-flag fa-lg" style="color: #C11B17" aria-hidden="true"></i>Aug. 2026 – New articles by Dr. Hare: his <a href="#welcome">Welcome</a>, <a href="pcl-r.html#psychopathy-101">Psychopathy 101</a>, <a href="pcl-r.html#pcl-r">Psychopathy and Its Measurement</a>, <a href="research.html#jingle-jangle">The Jingle/Jangle Fallacy</a>, and <a href="legacy.html#then-and-now">The Psychopathy Literature, Then and Now</a>.</p>
             </div>
             <div class="news-item">
-                <p><i class="fa-solid fa-flag fa-lg" style="color: #C11B17"></i>Jan. 1, 2025 – Need content from the old website? Use the <a href="https://web.archive.org/web/20231114064008/http://www.hare.org/index.html" target="_blank" rel="noopener">Wayback Machine</a> archive.</p>
+                <p><i class="fa-solid fa-flag fa-lg" style="color: #C11B17" aria-hidden="true"></i>Need content from the old website? Use the <a href="https://web.archive.org/web/20231114064008/http://www.hare.org/index.html" target="_blank" rel="noopener">Wayback Machine<span class="sr-only"> (opens in a new tab)</span></a> archive.</p>
             </div>
         </div>
 
 
         <div>
-          <article class="article-block">
+          <article id="welcome">
             <h2>Welcome</h2>
-            <p><span style="font-weight: 900;">Since the 1960’s, Robert Hare PhD. CM, has focused on understanding psychopathy</span>—a condition that has both fascinated and troubled him throughout his career. His goal has always been to bring clarity to this complex personality disorder, to lift the veil on behaviors that impact not only individuals but also families, communities, and society as a whole.</p>
-            <p>Through the development of the <span class="highlight">Psychopathy Checklist-Revised (PCL-R)</span>, Dr. Hare sought to provide a practical and reliable tool for identifying psychopathy. This work was born out of his desire to help professionals across psychology, criminology, and justice fields better recognize and understand individuals who possess a profound lack of empathy, remorse, and conscience. Psychopathy remains one of the most misunderstood and, often, underestimated conditions, and Dr. Hare has dedicated his career to changing that.</p>
-            <p>This website is designed to share Dr. Hare's research, reflections, and the progress that has been made in understanding psychopathy. Here, visitors will find resources that are useful to students, researchers, practitioners, and anyone interested in the subject. Dr. Hare aims to provide insight into the traits and behaviors that define psychopathy, the methods used to study it, and the societal implications of this knowledge.</p>
-            <p>Visitors are invited to explore the materials presented here and to engage with the content critically. The study of psychopathy is not just an academic pursuit—it is an effort to understand the darker facets of human behavior and, ultimately, to mitigate the harm they cause. Thank you for your interest in Dr. Hare's work, and we hope you find the information here both thought-provoking and enlightening.</p>
-            <button class="toggle-button">Read More</button>
+            <p class="byline">by Robert Hare · August 2026</p>
+            <p class="hare"><em>Robert Hare's Website on Psychopathy</em></p>
+            <h3>New Website, 2026</h3>
+            <p class="hare">For almost three decades, <cite class="book">Without Conscience</cite> has been my website dedicated to the explication of theory, research, and societal implications of psychopathy. Because of a complex and frustrating set of technical and other issues, the site has been dormant for several years. Among these issues were Covid-19, the former Webmaster's illness and retirement, and an unannounced termination of support for the Legacy Server that had hosted the platform for years. Although much of the material and links continued to be accessible, I was unable to edit the website, add new content, or read viewer comments and queries. Fortuitous resolution of these issues came during discussions with a relative, Rus Hathaway, who has extensive experience and expertise in Information Technology (IT) and Artificial Intelligence (AI), and was a pioneer in the development of online learning. As the <a href="#authorship"><em>Website Editor</em></a>, he transferred the original site to a new server for revision and updating. He integrates material that I produce (created content) with material produced by generative AI (curated content). The URL for the new website remains the same: <a href="https://www.hare.org">https://www.hare.org</a>.</p>
+            <h3>Objectives</h3>
+            <p class="hare">My original plan was to update this website and to include a series of articles on my experiences over the years, under the rubric of <em>Recollections on a Career</em>. This would be a daunting task, given my age and lack of cyberspace sophistication. Luckily for me, Rus envisioned a website that could serve as a proxy for an abridged memoir by presenting the research that my students, colleagues, and I (<q>my group</q>) have conducted over the years, including the development and use of the <a href="pcl-r.html#pcl-r"><cite class="book">Psychopathy Checklist-Revised</cite> (PCL-R)</a>, its predecessors and derivatives. These efforts were part of the more extensive endeavors and achievements of the many hundreds of other investigators and their students across the globe. We provide links to some of these researchers and their articles.</p>
+            <p class="hare">Finally, the scientific, clinical, and applied interest in psychopathy is accompanied by intense public fascination with the topic. Some media and popular portrayals of "psychopaths" are credible and informative, but many more are incredible, sensationalistic, misleading, fanciful, and even bizarre. Podcasts, chatlines, and online quizzes can be even worse. We will have much more to say about these and other issues throughout the pages of this website.<!-- TODO: link "these and other issues" to the "Psychopathy as Showbiz" page once it exists --></p>
+            <p class="hare">Robert D. Hare, Ph.D., CM<br>August 2026</p>
           </article>
 
           <article class="article-block">
@@ -66,33 +70,34 @@
             <p><span style="font-weight: 900;">Explore Further</span>: For those who wish to gain a deeper understanding of psychopathy and its far-reaching implications, Dr. Hare invites you to explore the full range of resources available on this website. From foundational research on the Psychopathy Checklist-Revised (PCL-R) to the latest studies and applications across mental health, criminal justice, and corporate settings, there is something here for everyone.</p>
             <p>Professionals will find essential insights into assessment tools, treatment considerations, and practical guidance for real-world contexts, while students and researchers can access a comprehensive archive of Dr. Hare’s publications and studies. For those with a general interest in psychopathy, the site offers media content, interviews, and reflections that bring clarity to this complex topic.</p>
             <p>Each section of the site is designed to deepen understanding, spark curiosity, and support informed dialogue. Whether you are here as a professional seeking to enhance your practice, a student delving into psychopathy research, or a curious mind drawn to the topic, we invite you to explore, learn, and engage with the resources Dr. Hare has curated.</p>
-            <p><span style="font-weight: 900;">Support Survivors</span>: Dr. Hare is proud to support the Aftermath: Surviving Psychopathy Foundation, a non-profit dedicated to helping those affected by psychopathic behavior. Please consider a donation to assist their efforts in raising awareness, supporting victims, and advancing essential research.</p>
-            <button class="toggle-button">Read More</button>
+            <p><span style="font-weight: 900;">Support Survivors</span>: Dr. Hare is proud to support the <a href="https://aftermath-surviving-psychopathy.org/" target="_blank" rel="noopener">Aftermath: Surviving Psychopathy Foundation<span class="sr-only"> (opens in a new tab)</span></a>, a non-profit dedicated to helping those affected by psychopathic behavior. Please consider a donation to assist their efforts in raising awareness, supporting victims, and advancing essential research.</p>
+            <button class="toggle-button" aria-expanded="false">Read More</button>
           </article>
         </div>
 
-            <article style="background-color: #9bbfca80;">
+            <article id="authorship" style="background-color: #9bbfca80;">
             <h2>Authorship of Website</h2>
               <p>This website serves as a platform for Dr. Robert Hare to share his insights, reflections, and research on psychopathy. Sections authored by Dr. Hare are marked with the byline: <span class="hare">“by Robert Hare.”</span></p>
               <p>Additional content is curated by the website editor—<a href="#about-modal" id="about-link">Rus Hathaway</a>, using generative AI tools to synthesize material from Dr. Hare’s research, publications, and notes. Dr. Hare personally reviews and approves all content to ensure accuracy and alignment with his expertise.</p>
               <p>Unless explicitly marked with Dr. Hare’s byline, you can assume the content has been developed by the website editor under his guidance.</p>
+              <p>The site is intended to inform; it does not provide advice, and generative AI is not used for clinical or forensic diagnosis, classification, risk assessment, release decisions, or treatment evaluation of individuals. See Dr. Hare's note on <a href="legacy.html#analytic-tools">Analytic Tools</a>.</p>
               <p>Thank you for visiting, and we hope this site deepens your understanding of psychopathy.</p>
             </article>
-            <div id="about-modal" class="modal" style="display: none;">
-             <div class="modal-content">
-              <span class="close">&times;</span>
-               <h3>About Rus Hathaway</h3>
-               <p>In the early 1990s, when most people saw computers as glorified typewriters, <a href="https://www.linkedin.com/in/rushathaway/" target="_blank" rel="noopener">Rus Hathaway</a> saw something else: a way to reinvent education. In 1992, he launched <a href="http://web.archive.org/web/19971012102200/http://www.cyberhigh.org/" target="_blank" rel="noopener">CyberHigh</a>, Canada’s first fully virtual school. The idea was simple but revolutionary: learning without walls, lockers, or school bells. It was a solution for kids who didn’t fit into the rigid structure of traditional classrooms. Rus stepped away in 1998, but CyberHigh kept running, quietly serving as a lifeline for students who needed a different kind of school.</p>
+            <dialog id="about-modal" class="modal" aria-labelledby="about-modal-title">
+             <div>
+              <button type="button" class="close" aria-label="Close">&times;</button>
+               <h3 id="about-modal-title">About Rus Hathaway</h3>
+               <p>In the early 1990s, when most people saw computers as glorified typewriters, <a href="https://www.linkedin.com/in/rushathaway/" target="_blank" rel="noopener">Rus Hathaway<span class="sr-only"> (opens in a new tab)</span></a> saw something else: a way to reinvent education. In 1992, he launched <a href="http://web.archive.org/web/19971012102200/http://www.cyberhigh.org/" target="_blank" rel="noopener">CyberHigh<span class="sr-only"> (opens in a new tab)</span></a>, Canada’s first fully virtual school. The idea was simple but revolutionary: learning without walls, lockers, or school bells. It was a solution for kids who didn’t fit into the rigid structure of traditional classrooms. Rus stepped away in 1998, but CyberHigh kept running, quietly serving as a lifeline for students who needed a different kind of school.</p>
               <p>Hathaway’s path since then has been anything but conventional. He earned a Master’s in Education Leadership and worked with Naverus, an aerospace navigation startup, where he designed training programs for their client, Southwest Airlines, teaching pilots to master flight automation systems. (Because, as it turns out, flying a 737 isn’t something you just pick up as you go.) Later, he lent his skills to Mammoet, crafting industrial documentation for a company that moves impossibly massive objects. Eventually, he found his way back to education, designing learning experiences at MacEwan University, the University of Alberta, and the University of Washington.</p>
-              <p>By the time MOOCs—massive online courses—took off, Hathaway was already ahead of the curve. He’s built some of the most impactful ones on Coursera, including  <a class="highlight" href="https://www.coursera.org/specializations/product-management" target="_blank" rel="noopener">Software Product Management</a>, <a class="highlight" href="https://www.coursera.org/specializations/software-design-architecture?" target="_blank" rel="noopener">Software Design Architecture</a>, <a class="highlight" href="https://www.coursera.org/learn/black-holes-astro-101?" target="_blank" rel="noopener">Astro 101: Black Holes</a>, and <a class="highlight" href="https://www.coursera.org/learn/bugs-101" target="_blank" rel="noopener">Bugs 101: Insect-Human Interactions</a> (University of Alberta), and <a class="highlight" href="https://www.coursera.org/learn/machine-teaching-ai" target="_blank" rel="noopener">Machine Teaching for Autonomous AI</a>, <a class="highlight" href="https://www.coursera.org/learn/designing-autonomous-ai?" target="_blank" rel="noopener">Designing Autonomous AI</a> (University of Washington). His latest, <span class="highlight">Building Webpages with HTML & CSS</span> wasn’t just another line on his résumé—it gave him the tools to build this website. Call it his first foray into web development and a project rooted in preserving a legacy.</p>
+              <p>By the time MOOCs—massive online courses—took off, Hathaway was already ahead of the curve. He’s built some of the most impactful ones on Coursera, including  <a class="highlight" href="https://www.coursera.org/specializations/product-management" target="_blank" rel="noopener">Software Product Management<span class="sr-only"> (opens in a new tab)</span></a>, <a class="highlight" href="https://www.coursera.org/specializations/software-design-architecture?" target="_blank" rel="noopener">Software Design Architecture<span class="sr-only"> (opens in a new tab)</span></a>, <a class="highlight" href="https://www.coursera.org/learn/black-holes-astro-101?" target="_blank" rel="noopener">Astro 101: Black Holes<span class="sr-only"> (opens in a new tab)</span></a>, and <a class="highlight" href="https://www.coursera.org/learn/bugs-101" target="_blank" rel="noopener">Bugs 101: Insect-Human Interactions<span class="sr-only"> (opens in a new tab)</span></a> (University of Alberta), and <a class="highlight" href="https://www.coursera.org/learn/machine-teaching-ai" target="_blank" rel="noopener">Machine Teaching for Autonomous AI<span class="sr-only"> (opens in a new tab)</span></a>, <a class="highlight" href="https://www.coursera.org/learn/designing-autonomous-ai?" target="_blank" rel="noopener">Designing Autonomous AI<span class="sr-only"> (opens in a new tab)</span></a> (University of Washington). His latest, <span class="highlight">Building Webpages with HTML & CSS</span> wasn’t just another line on his résumé—it gave him the tools to build this website. Call it his first foray into web development and a project rooted in preserving a legacy.</p>
               <p>Today, Hathaway is embracing generative AI. Not because it’s trendy, but because he sees it as the next frontier in education. For Rus, it’s not about teaching people what to think—it’s about teaching them how to think in a world that’s changing faster than ever. If that means shaking things up again, he’s ready. After all, it wouldn’t be the first time.</p>
             </div>
-          </div>
+          </dialog>
 
     </main>
     <footer class="footer">
           <img src="images/hare-logo.jpg" alt="Hare Logo">
-          <p>&copy; Copyright Robert Hare 2025</p>
+          <p>&copy; Copyright Robert Hare 2026</p>
       </footer>
     <!-- JavaScript code -->
         <script>
@@ -104,36 +109,39 @@
            mobileMenu.setAttribute('aria-expanded', navList.classList.contains('active'));
         });
           document.querySelectorAll('.toggle-button').forEach(button => {
-          button.addEventListener('click', function() {
-              const articleBlock = this.parentElement;
-              articleBlock.classList.toggle('expanded');
-              this.textContent = articleBlock.classList.contains('expanded') ? 'Read Less' : 'Read More';
-          });
-      });
+            const articleBlock = button.parentElement;
+            const setState = (expanded) => {
+                articleBlock.classList.toggle('expanded', expanded);
+                button.textContent = expanded ? 'Read Less' : 'Read More';
+                button.setAttribute('aria-expanded', expanded);
+            };
+            button.addEventListener('click', () => setState(!articleBlock.classList.contains('expanded')));
+            // If keyboard focus lands on something hidden inside a collapsed article, expand it
+            articleBlock.addEventListener('focusin', (event) => {
+                if (event.target !== button && !articleBlock.classList.contains('expanded')) setState(true);
+            });
+        });
         </script>
         <script>
-        // Get modal and link
-const modal = document.getElementById("about-modal");
-const link = document.getElementById("about-link");
-const closeBtn = document.querySelector(".close");
+        // "About Rus Hathaway" dialog. The native <dialog> element traps focus,
+        // closes on Escape, and returns focus to the link when closed.
+        const modal = document.getElementById("about-modal");
+        const link = document.getElementById("about-link");
+        const closeBtn = modal.querySelector(".close");
 
-// Show modal on link click
-link.addEventListener("click", (event) => {
-    event.preventDefault(); // Prevent default anchor behavior
-    modal.style.display = "block";
-});
+        link.addEventListener("click", (event) => {
+            event.preventDefault();
+            modal.showModal();
+        });
 
-// Hide modal on close button click
-closeBtn.addEventListener("click", () => {
-    modal.style.display = "none";
-});
+        closeBtn.addEventListener("click", () => modal.close());
 
-// Hide modal on outside click
-window.addEventListener("click", (event) => {
-    if (event.target === modal) {
-        modal.style.display = "none";
-    }
-});
+        // Close when the backdrop (outside the dialog box) is clicked
+        modal.addEventListener("click", (event) => {
+            if (event.target === modal) {
+                modal.close();
+            }
+        });
 </script>
         <!-- Start of StatCounter Code -->
         <script>
@@ -143,7 +151,7 @@ window.addEventListener("click", (event) => {
         var sc_security="690ba1c2";
         </script>
 
-        <script src="https://www.statcounter.com/counter/counter.js"></script><noscript><a href="https://www.statcounter.com/" target="_blank"><img  src="https://c.statcounter.com/counter.php?sc_project=1228587&amp;java=0&amp;security=690ba1c2&amp;invisible=1" alt="hit counter code"></a> </noscript>
+        <script src="https://www.statcounter.com/counter/counter.js"></script><noscript><a href="https://www.statcounter.com/" target="_blank"><img  src="https://c.statcounter.com/counter.php?sc_project=1228587&amp;java=0&amp;security=690ba1c2&amp;invisible=1" alt="hit counter code"><span class="sr-only"> (opens in a new tab)</span></a> </noscript>
         <!-- End of StatCounter Code -->
 
 </body>

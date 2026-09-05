@@ -25,7 +25,6 @@ h1 {
     font-family: 'Open Sans', 'Arial', sans-serif;
     font-size: 3em;  /* Default size for larger screens */
     margin-bottom: 10px;
-    white-space: nowrap; /* Prevent text wrapping */
 }
 
 h2 {
@@ -74,41 +73,36 @@ ol {
   padding-left: 25px;
 }
 
-/* Modal styling */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Keeps the modal floating above the page */
-    z-index: 1000; /* Ensures it appears above other elements */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    overflow-y: auto; /* Allow scrolling within the modal */
-}
-
-/* Modal content styling */
-.modal-content {
-    position: relative; /* Relative positioning for internal elements */
-    background-color: #fff; /* Background color for the modal */
-    margin: 10% auto; /* Center horizontally and add space from the top */
-    padding: 20px;
+/* Modal styling: native <dialog>, which handles focus trapping and Escape for us */
+dialog.modal {
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    padding: 0;                 /* padding lives on the inner div so backdrop clicks are unambiguous */
     border: 1px solid #888;
-    width: 90%; /* Adjust width for smaller screens */
-    max-width: 600px; /* Limit maximum width for larger screens */
-    max-height: 90%; /* Ensure the modal doesn’t exceed the viewport height */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
-    border-radius: 10px; /* Optional: Rounded corners */
-    overflow-y: auto; /* Enable scrolling within the modal if content overflows */
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+}
+dialog.modal > div {
+    padding: 20px;
+}
+dialog.modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 /* Close button styling */
 .close {
-    color: #aaa;
+    color: #555;
     float: right;
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
+    background: none;
+    border: none;
+    line-height: 1;
+    padding: 0 4px;
 }
 
 .close:hover,
@@ -219,10 +213,11 @@ ol {
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: 'Open Sans', 'Arial', sans-serif;
-    font-size: 3.5vw;
-    background-color: rgba(0, 0, 0, 0.5);
+    font-size: clamp(1.25rem, 3.5vw, 2.5rem); /* Scales, but stays readable at 200% zoom */
+    background-color: rgba(0, 0, 0, 0.6);
     padding: 20px;
-    white-space: nowrap; /* Prevent the text from wrapping to a new line */
+    max-width: 95%;
+    margin-bottom: 0;
 }
 
 /* Tabs styling */
@@ -472,8 +467,8 @@ hr {
     }
 
     .banner h1 {
-        font-size: 4.5vw; /* Adjust the font size to make it fit better on small screens */
-        padding: 10px;  /* Optional: add padding to make the text more readable */
+        font-size: clamp(1rem, 4.5vw, 1.5rem);
+        padding: 10px;
     }
     .content {
       margin-top: 20px;
@@ -523,10 +518,9 @@ hr {
    .nav-list a {
        font-size: 5vw; /* Responsive font size */
    }
-   .modal-content {
-    margin: 5% auto; /* Reduce top margin for smaller screens */
-    padding: 15px; /* Adjust padding */
-    font-size: 90%; /* Slightly smaller text for readability */
+   dialog.modal > div {
+    padding: 15px;
+    font-size: 90%;
 }
 
    /* Responsive video container */
@@ -548,4 +542,161 @@ hr {
        border: 0;
    }
 
+}
+
+/* =========================================================
+   Accessibility helpers (WCAG 2.1 AA)
+   ========================================================= */
+
+/* Visually hidden, but read by screen readers */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* "Skip to main content" link: hidden until it receives keyboard focus */
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: 0.5rem;
+    z-index: 100;
+    background: #073B4D;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: 600;
+    text-decoration: none;
+}
+.skip-link:focus {
+    left: 0.5rem;
+    outline: 3px solid #fff;
+}
+
+/* Clear keyboard focus indicator; the white halo keeps it visible on the dark nav bar too */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+summary:focus-visible,
+[tabindex]:focus-visible {
+    outline: 3px solid #073B4D;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 5px #fff;
+}
+main:focus { outline: none; }
+
+/* Reduce motion for users who ask for it */
+@media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+}
+
+/* =========================================================
+   Article markup: quotations, citations, figures, bylines, notes
+   ========================================================= */
+
+.byline {
+    font-family: 'Merriweather', serif;
+    font-size: 0.95rem;
+    color: #3A3B3C;
+    margin-bottom: 1rem;
+}
+
+cite.book {
+    font-style: italic;
+    font-weight: 600;
+}
+
+blockquote {
+    margin: 1rem 0 1.25rem 1.25rem;
+    padding: 0.75rem 1rem;
+    border-left: 4px solid #356975;
+    background: #f1f5f7;
+    border-radius: 0 6px 6px 0;
+}
+blockquote p { margin-bottom: 0.75rem; }
+blockquote p:last-child { margin-bottom: 0; }
+blockquote .attribution {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+figure {
+    margin: 1.5rem 0;
+}
+figure img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    background: #fff;
+}
+figcaption {
+    font-size: 0.9rem;
+    color: #3A3B3C;
+    margin-top: 0.5rem;
+}
+figure details {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+figure summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: #073B4D;
+}
+
+/* Boxed note (e.g. a note to researchers, copyright notice) */
+.note {
+    border: 2px solid #356975;
+    background: #cfd9e1;
+    padding: 1rem 1.25rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+}
+.note h3, .note h4 { margin-top: 0; }
+.note p:last-child { margin-bottom: 0; }
+
+/* Editor's note, visually distinct from Dr. Hare's text */
+.editor-note {
+    font-size: 0.9rem;
+    border-top: 1px solid #9bbfca;
+    padding-top: 0.5rem;
+    margin-top: 1rem;
+}
+
+/* Placeholder for content not yet supplied */
+.placeholder {
+    font-style: italic;
+    color: #555;
+}
+
+h5 {
+    font-family: 'Open Sans', 'Arial', sans-serif;
+    color: #073B4D;
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Tighter lists for short label items */
+ul.compact li, ol.compact li {
+    padding-bottom: 0.25em;
+}
+
+/* Accordion header is a heading wrapping a real button */
+.accordion-header button {
+    all: unset;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    font: inherit;
+    color: inherit;
 }
