@@ -700,3 +700,8 @@ ul.compact li, ol.compact li {
     font: inherit;
     color: inherit;
 }
+
+/* Q&A page: keep a linked question visible below the sticky navigation bar */
+.accordion[id] {
+    scroll-margin-top: 5rem;
+}
