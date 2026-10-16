@@ -705,3 +705,20 @@ ul.compact li, ol.compact li {
 .accordion[id] {
     scroll-margin-top: 5rem;
 }
+
+/* Reference list at the end of an article (editorial, not Dr. Hare's text) */
+.references {
+    font-size: 0.9rem;
+    border-top: 1px solid #9bbfca;
+    margin-top: 1.5rem;
+    padding-top: 0.75rem;
+}
+.references h4 { margin: 0 0 0.5rem; font-size: 1rem; }
+.references ul { list-style: none; padding-left: 0; margin: 0; }
+.references li {
+    padding-left: 1.5em;
+    text-indent: -1.5em; /* APA-style hanging indent */
+    margin-bottom: 0.5rem;
+}
+.references .ref-link { white-space: nowrap; }
+.references cite, .references cite.book { font-style: italic; font-weight: normal; }
